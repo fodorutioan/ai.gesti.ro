@@ -2,7 +2,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
-      <header className="border-b border-gray-100 glass fixed w-full z-50 shadow-depth-md">
+      <header className="fixed top-0 w-full z-[100] border-b border-gray-200 bg-white/95 backdrop-blur-md shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="text-2xl font-bold">
