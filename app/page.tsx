@@ -17,9 +17,9 @@ export default function HomePage() {
             <a href="#faq" className="text-sm font-medium text-gray-600 hover:text-gray-900">FAQ</a>
             <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-gray-900">Contact</a>
           </nav>
-          <button className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all">
-            Acces anticipat →
-          </button>
+          <a href="#demo-live" className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all inline-block">
+            Cere demo live →
+          </a>
         </div>
       </header>
 
@@ -37,18 +37,16 @@ export default function HomePage() {
             
             {/* IMPROVED HEADLINE (Gavriil) */}
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Primul angajat virtual din firma ta.{' '}
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-clip-text text-transparent">
-                Procesează facturi prin WhatsApp.
-              </span>{' '}
-              Se integrează cu gesti.ro. Tu doar aprobi.
+              În 10 minute, factura ajunge din WhatsApp în gesti.ro — fără copy-paste.
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-clip-text text-transparent block mt-2">
+                Tu validezi. AI execută.
+              </span>
             </h1>
             
             {/* IMPROVED SUBHEADLINE (Gavriil) */}
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Trimite factura pe WhatsApp. Agenții AI o procesează automat în <strong>gesti.ro</strong>.  
-              Verificare date, arhivare, pregătire plată — totul în <strong className="text-blue-600">10 minute</strong>.  
-              <strong className="text-gray-900">Tu doar dai OK. Fără copy-paste. Fără facturi pierdute.</strong>
+              Trimiți documentul pe WhatsApp, iar agenții AI fac prelucrarea, verificarea și pregătirea de plată în <strong className="text-blue-600">același flux</strong>.
+              <strong className="text-gray-900 block mt-2">Mai puțină birocrație. Mai mult timp pentru vânzări și clienți.</strong>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 fadeInUp delay-200">
@@ -83,6 +81,54 @@ export default function HomePage() {
                 <span className="font-medium">{text}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Iterația 3 — Dovadă rapidă */}
+      <section id="demo-live" className="py-16 bg-gradient-to-b from-white to-blue-50/40 px-4 sm:px-6 lg:px-8 border-y border-blue-100/60">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="inline-flex items-center space-x-2 bg-blue-50 border border-blue-200 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <span>Iterația nouă</span>
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Ce vezi concret în primele 10 minute</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">Am făcut fluxul mai clar: input unic pe WhatsApp, verificare automată, aprobare finală umană.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {[
+              {
+                t: 'Minutul 0-2',
+                title: 'Documentul intră în flux',
+                d: 'Trimiți factura pe WhatsApp. AI extrage datele și identifică furnizorul.',
+              },
+              {
+                t: 'Minutul 2-5',
+                title: 'Validare automată',
+                d: 'Suma, data scadentă și câmpurile critice sunt verificate înainte de propunerea de plată.',
+              },
+              {
+                t: 'Minutul 5-10',
+                title: 'Tu aprobi, sistemul execută',
+                d: 'Primești rezumatul și confirmi dintr-un click. Controlul rămâne la tine.',
+              },
+            ].map((item) => (
+              <div key={item.t} className="bg-white rounded-2xl border border-gray-200 p-6 shadow-depth-md">
+                <p className="text-xs font-bold text-blue-600 mb-2 uppercase tracking-wide">{item.t}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.d}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/demo" className="bg-gray-900 text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-black transition-all text-center">
+              Vezi demo acum
+            </a>
+            <a href="mailto:contact@ai.gesti.ro" className="bg-white border-2 border-gray-200 text-gray-800 px-6 py-3 rounded-xl font-semibold text-base hover:border-gray-300 transition-all text-center">
+              Cere demo live cu echipa
+            </a>
           </div>
         </div>
       </section>
