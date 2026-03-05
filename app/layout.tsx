@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import '../styles/animations.module.css'
 
 export const metadata: Metadata = {
   title: 'ai.gesti.ro — Automatizare Inteligentă pentru ERP',

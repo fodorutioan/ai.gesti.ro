@@ -1,0 +1,358 @@
+/**
+ * animations.module.css
+ * 
+ * Visual depth enhancement + micro-interactions pentru ai.gesti.ro
+ * Inspirat din gesti.ro design sophistication
+ * 
+ * Performance: GPU-accelerated transforms (transform, opacity)
+ * Bundle size target: <10KB
+ */
+
+/* ========================================
+   1. SCROLL ANIMATIONS (IntersectionObserver-ready)
+   ======================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.fadeIn {
+  animation: fadeIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Delay utilities pentru sequential animations */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* ========================================
+   2. BUTTON HOVER STATES (scale + shadow + glow)
+   ======================================== */
+
+.btn-primary {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 
+    0 10px 25px -5px rgba(37, 99, 235, 0.3),
+    0 0 20px 0 rgba(147, 51, 234, 0.2),
+    0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:active {
+  transform: scale(0.98) translateY(0);
+}
+
+.btn-secondary {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.03) translateY(-1px);
+  box-shadow: 
+    0 10px 20px -5px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* ========================================
+   3. CARD HOVER STATES (lift effect)
+   ======================================== */
+
+.card-lift {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, box-shadow;
+}
+
+.card-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px -10px rgba(0, 0, 0, 0.15),
+    0 10px 20px -5px rgba(59, 130, 246, 0.1),
+    0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+/* Variație pentru cards mai subtile */
+.card-subtle {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, box-shadow;
+}
+
+.card-subtle:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 24px -8px rgba(0, 0, 0, 0.12),
+    0 4px 8px -2px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================
+   4. LAYERED SHADOWS (depth enhancement)
+   ======================================== */
+
+.shadow-depth-sm {
+  box-shadow: 
+    0 1px 2px 0 rgba(0, 0, 0, 0.05),
+    0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.shadow-depth-md {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-depth-lg {
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 6px 12px -3px rgba(0, 0, 0, 0.08),
+    0 2px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-depth-xl {
+  box-shadow: 
+    0 20px 40px -10px rgba(0, 0, 0, 0.15),
+    0 10px 20px -5px rgba(0, 0, 0, 0.1),
+    0 4px 8px -2px rgba(0, 0, 0, 0.08);
+}
+
+/* Colored shadows pentru CTAs */
+.shadow-blue-glow {
+  box-shadow: 
+    0 10px 25px -5px rgba(37, 99, 235, 0.25),
+    0 0 15px 0 rgba(147, 51, 234, 0.15),
+    0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   5. GLASSMORPHISM EFFECTS (backdrop blur)
+   ======================================== */
+
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-blue {
+  background: rgba(59, 130, 246, 0.1);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* ========================================
+   6. SKELETON LOADERS
+   ======================================== */
+
+@keyframes skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skeleton {
+  animation: skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background: linear-gradient(
+    90deg,
+    rgba(229, 231, 235, 0.8) 0%,
+    rgba(243, 244, 246, 1) 50%,
+    rgba(229, 231, 235, 0.8) 100%
+  );
+  background-size: 200% 100%;
+  border-radius: 0.5rem;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  animation: skeleton-shimmer 2s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    #f3f4f6 0%,
+    #e5e7eb 20%,
+    #f3f4f6 40%,
+    #f3f4f6 100%
+  );
+  background-size: 200% 100%;
+}
+
+/* ========================================
+   7. GRADIENT ENHANCEMENTS
+   ======================================== */
+
+.gradient-mesh {
+  background: 
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(147, 51, 234, 0.1) 0px, transparent 50%);
+}
+
+.gradient-border {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 2px;
+  background: linear-gradient(135deg, #3B82F6, #9333EA, #3B82F6);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* ========================================
+   8. BORDER REFINEMENTS
+   ======================================== */
+
+.border-gradient {
+  border-image: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(147, 51, 234, 0.3)) 1;
+}
+
+.border-subtle {
+  border: 1px solid rgba(229, 231, 235, 1);
+  transition: border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.border-subtle:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+/* ========================================
+   9. CUSTOM CUBIC-BEZIER TRANSITIONS
+   ======================================== */
+
+.transition-smooth {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-duration: 0.3s;
+}
+
+.transition-bounce {
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-duration: 0.4s;
+}
+
+.transition-elastic {
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition-duration: 0.5s;
+}
+
+/* ========================================
+   10. PERFORMANCE UTILITIES
+   ======================================== */
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   11. MICRO-INTERACTIONS (hover glow effects)
+   ======================================== */
+
+.hover-glow {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-glow::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.4), rgba(147, 51, 234, 0.4));
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.hover-glow:hover::after {
+  opacity: 1;
+}
+
+/* ========================================
+   12. NAV LINK ACTIVE STATES
+   ======================================== */
+
+.nav-link {
+  position: relative;
+  transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3B82F6, #9333EA);
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   END OF FILE
+   Total estimated size: ~8KB
+   ======================================== */
