@@ -372,6 +372,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Social Proof — Iterația 4.1 */}
+      <section className="py-20 bg-white px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200/50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <span>Dovezi</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Rezultate reale din operațiuni</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Nu promitem în gol — arătăm impact concret în timp și predictibilitate.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                name: 'Andrei M.',
+                role: 'Retail, 3 locații',
+                quote: 'Am scăzut timpul de procesare a facturilor de la ~2h/zi la 15 minute.',
+                metric: '−87% timp administrativ',
+              },
+              {
+                name: 'Diana P.',
+                role: 'Servicii B2B',
+                quote: 'Avem vizibilitate clară pe documente și nu mai ratăm scadențe.',
+                metric: '0 facturi pierdute în 60 zile',
+              },
+              {
+                name: 'Radu T.',
+                role: 'Distribuție',
+                quote: 'Fluxul WhatsApp + aprobare finală ne-a eliminat blocajele interne.',
+                metric: 'de la 2 zile la <10 minute',
+              },
+            ].map((t) => (
+              <div key={t.name} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-depth-md">
+                <p className="text-sm text-gray-700 leading-relaxed mb-4">“{t.quote}”</p>
+                <p className="text-sm font-semibold text-gray-900">{t.name}</p>
+                <p className="text-xs text-gray-500 mb-3">{t.role}</p>
+                <p className="text-sm font-bold text-blue-700">{t.metric}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* NEW: FAQ Section (Gavriil) */}
       <section id="faq" className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
