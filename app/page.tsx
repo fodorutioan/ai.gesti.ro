@@ -314,6 +314,27 @@ export default function HomePage() {
             ))}
           </div>
 
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="bg-red-50/60 border border-red-100 rounded-2xl p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Ce NU face AI-ul</h3>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>• Nu aprobă plăți în locul tău</li>
+                <li>• Nu trimite bani fără confirmare explicită</li>
+                <li>• Nu ia decizii juridice sau fiscale finale</li>
+                <li>• Nu accesează conversațiile tale private</li>
+                <li>• Nu promite 0 erori — de aceea există validare umană</li>
+              </ul>
+            </div>
+            <div className="bg-blue-50/60 border border-blue-100 rounded-2xl p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cum verifici deciziile AI</h3>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>1. Vezi sursa datelor extrase (factură/document)</li>
+                <li>2. Primești rezumat clar: ce propune AI și de ce</li>
+                <li>3. Aprobi sau respingi înainte de orice acțiune critică</li>
+              </ul>
+            </div>
+          </div>
+
           {/* IMPROVED CLOSING (Gavriil) */}
           <p className="text-center text-lg text-gray-600 italic">
             Nu vindem utopii. Vindem soluții reale, construite cu <strong>responsabilitate, empatie și respect pentru oameni</strong>.
@@ -360,6 +381,10 @@ export default function HomePage() {
               {
                 q: 'Ce dacă AI greșește?',
                 a: 'Nimic nu se plătește fără aprobarea ta explicită. AI pregătește, tu validezi. Dacă detectăm o eroare, îți trimitem notificare să corectezi.'
+              },
+              {
+                q: 'Cum evitați bias-ul și deciziile opace?',
+                a: 'AI-ul nu ia decizii finale de business. Îți arătăm datele sursă și propunerea înainte de aprobare. Pentru acțiuni critice, controlul final rămâne uman.'
               },
             ].map(({ q, a }) => (
               <div key={q} className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg transition-all">
