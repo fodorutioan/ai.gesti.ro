@@ -1,14 +1,31 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'ai.gesti.ro — Agentic Business Automation',
-  description: 'Primul angajat virtual care nu costă un salariu. Automatizare inteligentă pentru ERP — de la factură la plată, printr-un simplu mesaj.',
+  title: 'ai.gesti.ro — Automatizare Inteligentă pentru ERP',
+  description: 'Procesare automată facturi prin WhatsApp. Agenți AI integrați cu gesti.ro ERP. Tu doar aprobi plata. Implementare în 48h. Produs în România.',
+  keywords: [
+    'automatizare erp',
+    'agent AI facturare',
+    'procesare automată facturi',
+    'software facturare AI',
+    'integrare WhatsApp ERP',
+    'gesti ro integrare',
+    'automatizare administrativă',
+    'ERP cloud România',
+    'facturare automată IMM',
+    'agenți virtuali business',
+    'software gestiune documente',
+    'AI contabilitate',
+    'digitalizare firme mici',
+    'automatizare taskuri repetitive',
+  ],
   openGraph: {
-    title: 'ai.gesti.ro — ERP meets AI',
-    description: 'Sistem multi-agentic care aduce puterea gesti.ro la nivelul WhatsApp-ului. Procesează facturi, pregătește plăți, tu doar aprobi.',
+    title: 'Primul angajat virtual din firma ta — ai.gesti.ro',
+    description: 'Trimite factura pe WhatsApp. AI o procesează. Tu doar aprobi. Automatizare inteligentă pentru ERP-uri mici și mijlocii.',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     type: 'website',
     locale: 'ro_RO',
+    siteName: 'ai.gesti.ro',
   },
   twitter: {
     card: 'summary_large_image',
@@ -18,7 +35,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
+  metadataBase: new URL('https://ai.gesti.ro'),
 }
 
 export default function RootLayout({
@@ -38,6 +57,8 @@ export default function RootLayout({
                   blue: { 50: '#EFF6FF', 500: '#3B82F6', 600: '#2563EB', 700: '#1D4ED8' },
                   purple: { 50: '#FAF5FF', 500: '#A855F7', 600: '#9333EA', 700: '#7E22CE' },
                   gray: { 50: '#F9FAFB', 100: '#F3F4F6', 200: '#E5E7EB', 300: '#D1D5DB', 400: '#9CA3AF', 600: '#4B5563', 900: '#111827' },
+                  green: { 50: '#F0FDF4', 100: '#DCFCE7', 500: '#10B981' },
+                  red: { 50: '#FEF2F2', 100: '#FEE2E2', 500: '#EF4444' },
                 }
               }
             }

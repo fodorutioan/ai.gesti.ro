@@ -1,6 +1,6 @@
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white">
       {/* Header */}
       <header className="border-b border-gray-100 bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
@@ -14,6 +14,7 @@ export default function HomePage() {
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#cum-functioneaza" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition">Cum funcționează</a>
             <a href="#beneficii" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition">Beneficii</a>
+            <a href="#faq" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition">FAQ</a>
             <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition">Contact</a>
           </nav>
           <button className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-6 py-2.5 rounded-lg hover:shadow-xl transition font-medium text-sm">
@@ -22,42 +23,50 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section - IMPROVED COPY */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50/50 via-white to-white relative overflow-hidden">
-        {/* Decorative blob */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl -z-10" />
         
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-4xl mx-auto mb-12">
-            {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200/50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <span>✨</span>
               <span>Automatizare Inteligentă</span>
             </div>
             
-            {/* Headline */}
+            {/* IMPROVED HEADLINE (Gavriil) */}
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Primul angajat virtual care{' '}
+              Primul angajat virtual din firma ta.{' '}
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-clip-text text-transparent">
-                nu costă un salariu
-              </span>
+                Procesează facturi prin WhatsApp.
+              </span>{' '}
+              Se integrează cu gesti.ro. Tu doar aprobi.
             </h1>
             
-            {/* Subheadline */}
+            {/* IMPROVED SUBHEADLINE (Gavriil) */}
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Trimite factura pe WhatsApp. Agenții AI o procesează automat în <strong>gesti.ro</strong>.
-              Tu doar aprobi plata. <strong className="text-gray-900">Fără copy-paste. Fără uitat.</strong>
+              Trimite factura pe WhatsApp. Agenții AI o procesează automat în <strong>gesti.ro</strong>.  
+              Verificare date, arhivare, pregătire plată — totul în <strong className="text-blue-600">10 minute</strong>.  
+              <strong className="text-gray-900">Tu doar dai OK. Fără copy-paste. Fără facturi pierdute.</strong>
             </p>
             
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all font-semibold text-lg">
                 Vreau acces anticipat →
               </button>
               <button className="border-2 border-gray-200 bg-white text-gray-700 px-8 py-4 rounded-xl hover:border-gray-300 hover:bg-gray-50 transition font-semibold text-lg">
-                Vizionează demo
+                Vizionează demo (2 min)
               </button>
+            </div>
+            
+            {/* IMPROVED TRUST SIGNALS */}
+            <div className="text-sm text-gray-600">
+              <span>⚡ Lansare martie 2026</span>
+              <span className="mx-3">•</span>
+              <span>🔒 Fără carte de credit</span>
+              <span className="mx-3">•</span>
+              <span>📧 Doar update-uri importante</span>
             </div>
           </div>
 
@@ -78,7 +87,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How It Works - IMPROVED */}
       <section id="cum-functioneaza" className="py-20 bg-white px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -86,26 +95,23 @@ export default function HomePage() {
               <span>Cum funcționează</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Patru pași simpli
+              Patru pași simpli. Zero învățare.
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Zero learning curve. Totul se întâmplă automat.
+              Procesare automată a facturilor direct din WhatsApp, integrată cu gesti.ro ERP.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { emoji: '📄', step: '01', title: 'Primești document', desc: 'Factură, contract sau chitanță — email, foto sau PDF.' },
-              { emoji: '💬', step: '02', title: 'Trimiți pe WhatsApp', desc: 'Interfață naturală. Vorbești cu agenții ca și cu un coleg.' },
-              { emoji: '🤖', step: '03', title: 'AI procesează instant', desc: 'Arhivare în gesti.ro, verificare date, pregătire plată.' },
-              { emoji: '✅', step: '04', title: 'Tu doar aprobi', desc: 'Notificare, un click, done. Controlul rămâne al tău.' },
+              { emoji: '📄', step: '01', title: 'Primești document', desc: 'Factură, contract sau chitanță — email, foto sau PDF prin WhatsApp.' },
+              { emoji: '💬', step: '02', title: 'Trimiți pe WhatsApp', desc: 'Interfață naturală. Vorbești cu agenții ca și cu un coleg. Zero învățare.' },
+              { emoji: '🤖', step: '03', title: 'AI procesează instant', desc: 'Citire automată date, arhivare în gesti.ro, verificare cont furnizor, pregătire plată.' },
+              { emoji: '✅', step: '04', title: 'Tu doar aprobi', desc: 'Notificare WhatsApp, un click, done. Controlul rămâne al tău. AI face munca grea.' },
             ].map(({ emoji, step, title, desc }) => (
               <div key={step} className="relative group">
-                {/* Backdrop blur card */}
                 <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
-                  {/* Large step number background */}
                   <div className="absolute top-4 right-4 text-6xl font-black text-gray-200 opacity-30 select-none">{step}</div>
-                  
                   <div className="relative z-10">
                     <div className="text-5xl mb-4">{emoji}</div>
                     <div className="text-sm font-bold text-blue-600 mb-2">{step}</div>
@@ -150,24 +156,114 @@ export default function HomePage() {
             ))}
           </div>
 
+          {/* NEW: Before/After Comparison (Gavriil) */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+              Înainte vs. Cu ai.gesti.ro
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-red-50/60 border border-red-100 rounded-2xl p-8">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="text-3xl">❌</div>
+                  <h4 className="text-xl font-bold text-gray-900">Fără ai.gesti.ro</h4>
+                </div>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-red-500 mt-1">•</span>
+                    <span>Primești factură pe email → o salvezi manual</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-red-500 mt-1">•</span>
+                    <span>O deschizi în 3 aplicații diferite → copy-paste date</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-red-500 mt-1">•</span>
+                    <span>Cauți factura lunea trecută → nu o găsești</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-red-500 mt-1">•</span>
+                    <span>Uiți de termen → plătești penalizări</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-red-500 mt-1">•</span>
+                    <span className="font-semibold">2-3 zile de la primire la plată</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-red-500 mt-1">•</span>
+                    <span>Stress zilnic cu administrația</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-green-50/60 border border-green-100 rounded-2xl p-8">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="text-3xl">✅</div>
+                  <h4 className="text-xl font-bold text-gray-900">Cu ai.gesti.ro</h4>
+                </div>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-green-500 mt-1">•</span>
+                    <span>Primești factură → forward pe WhatsApp</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-green-500 mt-1">•</span>
+                    <span>AI extrage automat toate datele → zero copy-paste</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-green-500 mt-1">•</span>
+                    <span>Toate facturile arhivate → căutare instant</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-green-500 mt-1">•</span>
+                    <span>Remindere automate → nicio penalizare</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-green-500 mt-1">•</span>
+                    <span className="font-semibold">10 minute de la primire la plată pregătită</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-green-500 mt-1">•</span>
+                    <span>Administrația rulează pe autopilot</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           {/* For Who */}
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { emoji: '💼', title: 'Executivi & Antreprenori', desc: 'Ai business, nu timp pentru birocrație. Vrei să delegi fără să angajezi oameni.' },
-              { emoji: '🚀', title: 'Fondatori în formare', desc: '"Angajați" care nu costă salarii. Scalezi rapid fără overhead operațional.' },
-              { emoji: '📊', title: 'Freelanceri & Consultanți', desc: 'Volume mari de facturi, puțin timp. Automatizează administrația, focus pe client.' },
-            ].map(({ emoji, title, desc }) => (
+              { 
+                emoji: '💼', 
+                title: 'Executivi & Antreprenori', 
+                desc: 'Ai business, nu timp pentru birocrație. Vrei să delegi taskuri administrative fără să angajezi oameni.',
+                useCase: 'Procesare 50-200 facturi/lună, colaborare cu 20-30 furnizori.'
+              },
+              { 
+                emoji: '🚀', 
+                title: 'Fondatori în formare', 
+                desc: '"Angajați" care nu costă salarii. Scalezi rapid fără overhead operațional. Perfect pentru prima ta firmă.',
+                useCase: 'Startup cu 1-3 oameni, buget limitat, focus pe produs.'
+              },
+              { 
+                emoji: '📊', 
+                title: 'Freelanceri & Consultanți', 
+                desc: 'Volume mari de facturi, puțin timp. Automatizează administrația, focus pe client și pe work-ul tău.',
+                useCase: '10-50 clienți activi, facturare recurentă, colaborare cu contabil.'
+              },
+            ].map(({ emoji, title, desc, useCase }) => (
               <div key={title} className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="text-5xl mb-4">{emoji}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-                <p className="text-gray-600 leading-relaxed">{desc}</p>
+                <p className="text-gray-600 leading-relaxed mb-3">{desc}</p>
+                <p className="text-sm text-gray-500 italic">Use case: {useCase}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Ethics / Philosophy */}
+      {/* Ethics / Philosophy - IMPROVED */}
       <section className="py-20 bg-white px-4 sm:px-6 lg:px-8 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -177,18 +273,36 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Tehnologie cu conștiință
             </h2>
+            {/* IMPROVED INTRO (Gavriil) */}
             <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              Știm că AI-ul ridică întrebări legitime despre viitorul muncii. De aceea ne angajăm 
-              să fim <strong>transparenți, empatici și responsabili</strong> în tot ce facem.
+              Știm că AI-ul ridică întrebări legitime despre viitorul muncii. <strong>Mulți oameni se tem de automatizare</strong> — și au dreptate să pună întrebări.
+              <br/><br/>
+              De aceea ne angajăm să fim <strong>transparenți, empatici și responsabili</strong> în tot ce facem. Nu vindem utopii. Vindem soluții reale, cu bunele intenții în inimă.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
             {[
-              { icon: '🔍', title: 'Transparență', desc: 'Explică clar cum funcționează AI-ul. Fără "magie", fără ascunzișuri. Tu știi exact ce se întâmplă cu datele tale.' },
-              { icon: '🤝', title: 'Empatie', desc: 'Recunoaștem impactul social al automatizării. Ascultăm îngrijorările legitime și construim soluții responsabile.' },
-              { icon: '⚖️', title: 'Responsabilitate', desc: 'Nu înlocuim oameni inutil. Ajutăm oamenii să fie mai productivi, să lucreze pe ce contează cu adevărat.' },
-              { icon: '👤', title: 'Control uman', desc: 'Deciziile importante rămân ale tale. AI face munca grea (procesare, arhivare), tu menții controlul (aprobare, strategie).' },
+              { 
+                icon: '🔍', 
+                title: 'Transparență', 
+                desc: 'Îți explicăm clar cum funcționează AI-ul. Fără "magie", fără ascunzișuri. Știi exact ce se întâmplă cu datele tale, ce citește AI-ul, ce decide automat și ce îți cere aprobare.'
+              },
+              { 
+                icon: '🤝', 
+                title: 'Empatie', 
+                desc: 'Recunoaștem impactul social al automatizării. Ascultăm îngrijorările legitime și construim soluții responsabile. Nu minimalizăm fricile — ci răspundem cu transparență și acțiuni concrete.'
+              },
+              { 
+                icon: '⚖️', 
+                title: 'Responsabilitate', 
+                desc: 'Nu înlocuim oameni inutil. Scopul nostru: să îi ajutăm să fie mai productivi, să lucreze pe ce contează cu adevărat. AI face taskurile repetitive (procesare, arhivare). Tu faci munca strategică (decizii, relații, creștere).'
+              },
+              { 
+                icon: '👤', 
+                title: 'Control uman', 
+                desc: 'Deciziile importante rămân ale tale. AI pregătește plata, dar tu o aprobi. AI sugerează acțiuni, dar tu decizi. Tehnologie care asistă, nu înlocuiește.'
+              },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="flex space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all">
                 <div className="text-4xl flex-shrink-0">{icon}</div>
@@ -200,15 +314,65 @@ export default function HomePage() {
             ))}
           </div>
 
-          <p className="text-center text-lg text-gray-600 mt-12 italic">
-            Nu vindem utopii. Vindem soluții reale, cu bunele intenții în inimă.
+          {/* IMPROVED CLOSING (Gavriil) */}
+          <p className="text-center text-lg text-gray-600 italic">
+            Nu vindem utopii. Vindem soluții reale, construite cu <strong>responsabilitate, empatie și respect pentru oameni</strong>.
+            <br/>
+            Dacă ești sceptic față de AI, <strong>e OK. Vrem să vorbim cu tine.</strong> 📧{' '}
+            <a href="mailto:fodorut.ionut@gmail.com" className="text-blue-600 hover:underline">fodorut.ionut@gmail.com</a>
           </p>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* NEW: FAQ Section (Gavriil) */}
+      <section id="faq" className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200/50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <span>FAQ</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Întrebări frecvente
+            </h2>
+            <p className="text-lg text-gray-600">
+              Ai o întrebare? Probabil nu ești primul.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: 'Trebuie să am deja gesti.ro ERP ca să folosesc ai.gesti.ro?',
+                a: 'Da, momentan ai.gesti.ro se integrează cu gesti.ro. Dacă nu ai cont, poți crea unul în paralel cu înscrierea pentru early access.'
+              },
+              {
+                q: 'Ce se întâmplă cu datele mele?',
+                a: 'Datele sunt stocate în UE (GDPR compliant). AI-ul citește doar ce trimiți explicit pe WhatsApp. Nu accesăm alte conversații.'
+              },
+              {
+                q: 'Pot să anulez oricând?',
+                a: 'Da, fără penalizări. Cancel oricând din dashboard.'
+              },
+              {
+                q: 'Cum funcționează prețul?',
+                a: 'Pricing-ul va fi anunțat la lansare (martie 2026). Early adopters primesc 50% reducere primul an.'
+              },
+              {
+                q: 'Ce dacă AI greșește?',
+                a: 'Nimic nu se plătește fără aprobarea ta explicită. AI pregătește, tu validezi. Dacă detectăm o eroare, îți trimitem notificare să corectezi.'
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg transition-all">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{q}</h3>
+                <p className="text-gray-600 leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section - IMPROVED */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700 relative overflow-hidden">
-        {/* Decorative blobs */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl" />
         
@@ -216,10 +380,35 @@ export default function HomePage() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Gata să-ți economisești timpul?
           </h2>
-          <p className="text-xl mb-8 text-blue-100 leading-relaxed">
-            Înscrie-te pentru acces anticipat. Fii printre primii care testează viitorul automatizării inteligente. 
-            Fără obligații. Fără carte de credit.
-          </p>
+          
+          {/* IMPROVED SUBHEADLINE (Gavriil) */}
+          <div className="text-xl mb-8 text-blue-100 leading-relaxed">
+            <p className="mb-4">Înscrie-te pentru acces anticipat. <strong className="text-white">Lansare martie 2026.</strong></p>
+            <p className="mb-6">Fii printre primii 100 care testează viitorul automatizării inteligente.</p>
+            
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-left max-w-2xl mx-auto mb-8">
+              <p className="font-semibold text-white mb-3">Ce primești cu early access:</p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start space-x-2">
+                  <span className="text-green-300 mt-0.5">✓</span>
+                  <span>Acces înainte de lansarea publică</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-green-300 mt-0.5">✓</span>
+                  <span>Onboarding personalizat (1-on-1 cu echipa)</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-green-300 mt-0.5">✓</span>
+                  <span>Preț special first adopters (50% reducere primul an)</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-green-300 mt-0.5">✓</span>
+                  <span>Influență directă asupra roadmap-ului produsului</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
           <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto mb-6">
             <input 
               type="email" 
@@ -243,6 +432,10 @@ export default function HomePage() {
               <span>🔒</span>
               <span>Criptare end-to-end</span>
             </div>
+            <div className="flex items-center space-x-2">
+              <span>🇷🇴</span>
+              <span>Echipă în România</span>
+            </div>
           </div>
         </div>
       </section>
@@ -264,7 +457,7 @@ export default function HomePage() {
               </p>
               <div className="flex items-center space-x-2 text-sm">
                 <span>🇷🇴</span>
-                <span className="text-gray-400">Produs în România</span>
+                <span className="text-gray-400">Produs în România • ERP cloud România</span>
               </div>
             </div>
 
@@ -281,8 +474,8 @@ export default function HomePage() {
               <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Contact & Legal</h3>
               <ul className="space-y-3">
                 <li><a href="mailto:fodorut.ionut@gmail.com" className="text-gray-400 hover:text-blue-400 transition text-sm">📧 Email</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-400 transition text-sm">Politica de confidențialitate</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-blue-400 transition text-sm">Termeni și condiții</a></li>
+                <li><a href="/legal/privacy" className="text-gray-400 hover:text-blue-400 transition text-sm">Politica de confidențialitate</a></li>
+                <li><a href="/legal/terms" className="text-gray-400 hover:text-blue-400 transition text-sm">Termeni și condiții</a></li>
               </ul>
             </div>
           </div>
@@ -293,6 +486,6 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   )
 }
