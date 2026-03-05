@@ -55,9 +55,9 @@ export default function HomePage() {
               <button className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all font-semibold text-lg">
                 Vreau acces anticipat →
               </button>
-              <button className="border-2 border-gray-200 bg-white text-gray-700 px-8 py-4 rounded-xl hover:border-gray-300 hover:bg-gray-50 transition font-semibold text-lg">
+              <a href="/demo" className="border-2 border-gray-200 bg-white text-gray-700 px-8 py-4 rounded-xl hover:border-gray-300 hover:bg-gray-50 transition font-semibold text-lg inline-block">
                 Vizionează demo (2 min)
-              </button>
+              </a>
             </div>
             
             {/* IMPROVED TRUST SIGNALS */}

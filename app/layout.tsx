@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Primul angajat virtual din firma ta — ai.gesti.ro',
     description: 'Trimite factura pe WhatsApp. AI o procesează. Tu doar aprobi. Automatizare inteligentă pentru ERP-uri mici și mijlocii.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/og-image.svg', width: 1200, height: 630 }],
     type: 'website',
     locale: 'ro_RO',
     siteName: 'ai.gesti.ro',
@@ -31,11 +31,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ai.gesti.ro — Agentic Business Automation',
     description: 'Primul angajat virtual care nu costă un salariu. De la factură la plată, printr-un simplu mesaj.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.svg'],
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: '/favicon.svg',
   },
   metadataBase: new URL('https://ai.gesti.ro'),
 }
