@@ -285,23 +285,28 @@ export default function HomePage() {
             {[
               { 
                 icon: '🔍', 
-                title: 'Transparență', 
-                desc: 'Îți explicăm clar cum funcționează AI-ul. Fără "magie", fără ascunzișuri. Știi exact ce se întâmplă cu datele tale, ce citește AI-ul, ce decide automat și ce îți cere aprobare.'
+                title: 'Transparență radicală', 
+                desc: 'Explicăm clar cum funcționează AI-ul: citește factura, extrage datele (furnizor, sumă, scadență), le verifică cu gesti.ro, pregătește plata. Fără "magie", fără ascunzișuri — știi exact ce se întâmplă cu datele tale.'
               },
               { 
                 icon: '🤝', 
-                title: 'Empatie', 
-                desc: 'Recunoaștem impactul social al automatizării. Ascultăm îngrijorările legitime și construim soluții responsabile. Nu minimalizăm fricile — ci răspundem cu transparență și acțiuni concrete.'
+                title: 'Empatie autentică', 
+                desc: 'Recunoaștem impactul social al automatizării. De aceea construim soluții responsabile: transparent, cu control uman, fără înlocuiri inutile. Ascultăm îngrijorările și răspundem cu acțiuni concrete.'
               },
               { 
                 icon: '⚖️', 
-                title: 'Responsabilitate', 
-                desc: 'Nu înlocuim oameni inutil. Scopul nostru: să îi ajutăm să fie mai productivi, să lucreze pe ce contează cu adevărat. AI face taskurile repetitive (procesare, arhivare). Tu faci munca strategică (decizii, relații, creștere).'
+                title: 'Responsabilitate socială', 
+                desc: 'Nu înlocuim oameni — automatizăm doar taskuri repetitive (procesare facturi, arhivare, notificări). Timpul câștigat? Investește-l în clienți, strategie, creație — lucruri pe care doar tu le poți face cu adevărat bine.'
               },
               { 
                 icon: '👤', 
-                title: 'Control uman', 
-                desc: 'Deciziile importante rămân ale tale. AI pregătește plata, dar tu o aprobi. AI sugerează acțiuni, dar tu decizi. Tehnologie care asistă, nu înlocuiește.'
+                title: 'Control uman (întotdeauna)', 
+                desc: 'Deciziile importante rămân ale tale — mereu. AI pregătește plata, dar tu o aprobi. AI sugerează acțiuni, dar tu decizi. Nicio tranzacție fără acordul tău explicit. Tehnologie care asistă, nu înlocuiește.'
+              },
+              { 
+                icon: '📚', 
+                title: 'Educație & pregătire', 
+                desc: 'Nu doar vindem produs — educăm utilizatorii despre AI, automatizare, cum să colaborezi eficient cu agenți. Resurse gratuite, ghiduri, suport dedicat pentru a înțelege și stăpâni tehnologia.'
               },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="flex space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all">
@@ -336,12 +341,22 @@ export default function HomePage() {
           </div>
 
           {/* IMPROVED CLOSING (Gavriil) */}
-          <p className="text-center text-lg text-gray-600 italic">
+          <p className="text-center text-lg text-gray-600 italic mb-8">
             Nu vindem utopii. Vindem soluții reale, construite cu <strong>responsabilitate, empatie și respect pentru oameni</strong>.
             <br/>
             Dacă ești sceptic față de AI, <strong>e OK. Vrem să vorbim cu tine.</strong> 📧{' '}
             <a href="mailto:fodorut.ionut@gmail.com" className="text-blue-600 hover:underline">fodorut.ionut@gmail.com</a>
           </p>
+
+          {/* CTA pentru ethics section (Rafail recommendation) */}
+          <div className="mt-8 text-center">
+            <p className="text-gray-700 text-base">
+              Ai întrebări despre cum folosim AI responsabil?{' '}
+              <a href="mailto:fodorut.ionut@gmail.com" className="text-blue-600 hover:text-blue-700 font-medium underline decoration-2 underline-offset-2">
+                Vorbește cu noi →
+              </a>
+            </p>
+          </div>
         </div>
       </section>
 
