@@ -2,7 +2,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
-      <header className="border-b border-gray-100 bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm">
+      <header className="border-b border-gray-100 glass fixed w-full z-50 shadow-depth-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="text-2xl font-bold">
@@ -12,21 +12,21 @@ export default function HomePage() {
             </div>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#cum-functioneaza" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition">Cum funcționează</a>
-            <a href="#beneficii" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition">Beneficii</a>
-            <a href="#faq" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition">FAQ</a>
-            <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition">Contact</a>
+            <a href="#cum-functioneaza" className="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">Cum funcționează</a>
+            <a href="#beneficii" className="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">Beneficii</a>
+            <a href="#faq" className="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">FAQ</a>
+            <a href="#contact" className="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">Contact</a>
           </nav>
-          <button className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-6 py-2.5 rounded-lg hover:shadow-xl transition font-medium text-sm">
+          <button className="btn-primary bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-6 py-2.5 rounded-lg font-medium text-sm shadow-blue-glow">
             Acces anticipat →
           </button>
         </div>
       </header>
 
       {/* Hero Section - IMPROVED COPY */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50/50 via-white to-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl -z-10" />
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 gradient-mesh relative overflow-hidden fadeIn">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl -z-10 animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl -z-10 animate-pulse" style={{animationDelay: \'1s\'}} />
         
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-4xl mx-auto mb-12">
@@ -51,11 +51,11 @@ export default function HomePage() {
               <strong className="text-gray-900">Tu doar dai OK. Fără copy-paste. Fără facturi pierdute.</strong>
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all font-semibold text-lg">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 fadeInUp delay-200">
+              <button className="btn-primary bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-blue-glow">
                 Vreau acces anticipat →
               </button>
-              <a href="/demo" className="border-2 border-gray-200 bg-white text-gray-700 px-8 py-4 rounded-xl hover:border-gray-300 hover:bg-gray-50 transition font-semibold text-lg inline-block">
+              <a href="/demo" className="btn-secondary border-2 border-subtle bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg inline-block shadow-depth-sm">
                 Vizionează demo (2 min)
               </a>
             </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
               { emoji: '✅', step: '04', title: 'Tu doar aprobi', desc: 'Notificare WhatsApp, un click, done. Controlul rămâne al tău. AI face munca grea.' },
             ].map(({ emoji, step, title, desc }) => (
               <div key={step} className="relative group">
-                <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                <div className="card-lift glass border-subtle rounded-2xl p-6 h-full shadow-depth-md hover-glow">
                   <div className="absolute top-4 right-4 text-6xl font-black text-gray-200 opacity-30 select-none">{step}</div>
                   <div className="relative z-10">
                     <div className="text-5xl mb-4">{emoji}</div>
@@ -148,7 +148,7 @@ export default function HomePage() {
               { value: '0', label: 'Facturi pierdute', desc: 'totul arhivat automat' },
               { value: '24/7', label: 'Agenți activi', desc: 'nu uită, nu dorm' },
             ].map(({ value, label, desc }) => (
-              <div key={label} className="text-center bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg transition-all">
+              <div key={label} className="card-subtle text-center glass-blue border-subtle rounded-2xl p-6 shadow-depth-md">
                 <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">{value}</div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
                 <div className="text-sm text-gray-600">{desc}</div>
@@ -162,7 +162,7 @@ export default function HomePage() {
               Înainte vs. Cu ai.gesti.ro
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-red-50/60 border border-red-100 rounded-2xl p-8">
+              <div className="bg-red-50/60 border border-red-100 rounded-2xl p-8 shadow-depth-md fadeInUp">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="text-3xl">❌</div>
                   <h4 className="text-xl font-bold text-gray-900">Fără ai.gesti.ro</h4>
@@ -195,7 +195,7 @@ export default function HomePage() {
                 </ul>
               </div>
 
-              <div className="bg-green-50/60 border border-green-100 rounded-2xl p-8">
+              <div className="bg-green-50/60 border border-green-100 rounded-2xl p-8 shadow-depth-md fadeInUp delay-200">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="text-3xl">✅</div>
                   <h4 className="text-xl font-bold text-gray-900">Cu ai.gesti.ro</h4>
@@ -252,7 +252,7 @@ export default function HomePage() {
                 useCase: '10-50 clienți activi, facturare recurentă, colaborare cu contabil.'
               },
             ].map(({ emoji, title, desc, useCase }) => (
-              <div key={title} className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div key={title} className="card-lift glass p-8 rounded-2xl border-subtle shadow-depth-lg">
                 <div className="text-5xl mb-4">{emoji}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-3">{desc}</p>
@@ -309,7 +309,7 @@ export default function HomePage() {
                 desc: 'Nu doar vindem produs — educăm utilizatorii despre AI, automatizare, cum să colaborezi eficient cu agenți. Resurse gratuite, ghiduri, suport dedicat pentru a înțelege și stăpâni tehnologia.'
               },
             ].map(({ icon, title, desc }) => (
-              <div key={title} className="flex space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all">
+              <div key={title} className="card-subtle flex space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white border-subtle rounded-2xl shadow-depth-md">
                 <div className="text-4xl flex-shrink-0">{icon}</div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
@@ -320,7 +320,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <div className="bg-red-50/60 border border-red-100 rounded-2xl p-6">
+            <div className="bg-red-50/60 border border-red-100 rounded-2xl p-6 shadow-depth-md fadeInUp">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Ce NU face AI-ul</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>• Nu aprobă plăți în locul tău</li>
@@ -330,7 +330,7 @@ export default function HomePage() {
                 <li>• Nu promite 0 erori — de aceea există validare umană</li>
               </ul>
             </div>
-            <div className="bg-blue-50/60 border border-blue-100 rounded-2xl p-6">
+            <div className="bg-blue-50/60 border border-blue-100 rounded-2xl p-6 shadow-depth-md fadeInUp delay-200">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Cum verifici deciziile AI</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>1. Vezi sursa datelor extrase (factură/document)</li>
@@ -402,7 +402,7 @@ export default function HomePage() {
                 a: 'AI-ul nu ia decizii finale de business. Îți arătăm datele sursă și propunerea înainte de aprobare. Pentru acțiuni critice, controlul final rămâne uman.'
               },
             ].map(({ q, a }) => (
-              <div key={q} className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg transition-all">
+              <div key={q} className="card-subtle glass border-subtle rounded-2xl p-6 shadow-depth-md">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{q}</h3>
                 <p className="text-gray-600 leading-relaxed">{a}</p>
               </div>
@@ -449,13 +449,13 @@ export default function HomePage() {
             </div>
           </div>
           
-          <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto mb-6">
+          <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto mb-6 fadeInUp delay-300">
             <input 
               type="email" 
               placeholder="Email-ul tău" 
-              className="flex-1 px-6 py-4 rounded-xl text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 font-medium bg-white/95 backdrop-blur-sm"
+              className="flex-1 px-6 py-4 rounded-xl text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 font-medium glass shadow-depth-md transition-smooth"
             />
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:shadow-2xl transition">
+            <button className="btn-primary bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-depth-lg">
               Înscrie-mă →
             </button>
           </form>
@@ -504,18 +504,18 @@ export default function HomePage() {
             <div>
               <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Produse</h3>
               <ul className="space-y-3">
-                <li><a href="https://gesti.ro" className="text-gray-400 hover:text-blue-400 transition text-sm">gesti.ro — ERP Cloud</a></li>
-                <li><a href="https://ai.gesti.ro" className="text-gray-400 hover:text-blue-400 transition text-sm">ai.gesti.ro — Agenți AI</a></li>
-                <li><a href="https://astralitech.com" className="text-gray-400 hover:text-blue-400 transition text-sm">Astrali — Compania mamă</a></li>
+                <li><a href="https://gesti.ro" className="text-gray-400 hover:text-blue-400 text-sm">gesti.ro — ERP Cloud</a></li>
+                <li><a href="https://ai.gesti.ro" className="text-gray-400 hover:text-blue-400 text-sm">ai.gesti.ro — Agenți AI</a></li>
+                <li><a href="https://astralitech.com" className="text-gray-400 hover:text-blue-400 text-sm">Astrali — Compania mamă</a></li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Contact & Legal</h3>
               <ul className="space-y-3">
-                <li><a href="mailto:fodorut.ionut@gmail.com" className="text-gray-400 hover:text-blue-400 transition text-sm">📧 Email</a></li>
-                <li><a href="/legal/privacy" className="text-gray-400 hover:text-blue-400 transition text-sm">Politica de confidențialitate</a></li>
-                <li><a href="/legal/terms" className="text-gray-400 hover:text-blue-400 transition text-sm">Termeni și condiții</a></li>
+                <li><a href="mailto:fodorut.ionut@gmail.com" className="text-gray-400 hover:text-blue-400 text-sm">📧 Email</a></li>
+                <li><a href="/legal/privacy" className="text-gray-400 hover:text-blue-400 text-sm">Politica de confidențialitate</a></li>
+                <li><a href="/legal/terms" className="text-gray-400 hover:text-blue-400 text-sm">Termeni și condiții</a></li>
               </ul>
             </div>
           </div>
