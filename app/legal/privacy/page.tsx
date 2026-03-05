@@ -118,8 +118,8 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p className="text-gray-700 leading-relaxed mt-4">
               Pentru a exercita aceste drepturi, trimite email la:{' '}
-              <a href="mailto:fodorut.ionut@gmail.com" className="text-blue-600 hover:underline">
-                fodorut.ionut@gmail.com
+              <a href="mailto:contact@ai.gesti.ro" className="text-blue-600 hover:underline">
+                contact@ai.gesti.ro
               </a>{' '}
               cu subiectul &#34;GDPR Request&#34;. Răspundem în maxim 30 de zile.
             </p>
@@ -173,7 +173,7 @@ export default function PrivacyPolicyPage() {
               Pentru întrebări despre protecția datelor:
             </p>
             <ul className="list-none space-y-2 text-gray-700">
-              <li><strong>Email:</strong> <a href="mailto:fodorut.ionut@gmail.com" className="text-blue-600 hover:underline">fodorut.ionut@gmail.com</a></li>
+              <li><strong>Email:</strong> <a href="mailto:contact@ai.gesti.ro" className="text-blue-600 hover:underline">contact@ai.gesti.ro</a></li>
               <li><strong>Companie:</strong> Astrali (Astralitech.com)</li>
               <li><strong>Adresă:</strong> [TBD — va fi completată la lansare]</li>
             </ul>

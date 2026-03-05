@@ -345,14 +345,14 @@ export default function HomePage() {
             Nu vindem utopii. Vindem soluții reale, construite cu <strong>responsabilitate, empatie și respect pentru oameni</strong>.
             <br/>
             Dacă ești sceptic față de AI, <strong>e OK. Vrem să vorbim cu tine.</strong> 📧{' '}
-            <a href="mailto:fodorut.ionut@gmail.com" className="text-blue-600 hover:underline">fodorut.ionut@gmail.com</a>
+            <a href="mailto:contact@ai.gesti.ro" className="text-blue-600 hover:underline">contact@ai.gesti.ro</a>
           </p>
 
           {/* CTA pentru ethics section (Rafail recommendation) */}
           <div className="mt-8 text-center">
             <p className="text-gray-700 text-base">
               Ai întrebări despre cum folosim AI responsabil?{' '}
-              <a href="mailto:fodorut.ionut@gmail.com" className="text-blue-600 hover:text-blue-700 font-medium underline decoration-2 underline-offset-2">
+              <a href="mailto:contact@ai.gesti.ro" className="text-blue-600 hover:text-blue-700 font-medium underline decoration-2 underline-offset-2">
                 Vorbește cu noi →
               </a>
             </p>
@@ -513,7 +513,7 @@ export default function HomePage() {
             <div>
               <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Contact & Legal</h3>
               <ul className="space-y-3">
-                <li><a href="mailto:fodorut.ionut@gmail.com" className="text-gray-600 hover:text-blue-500 text-sm">📧 Email</a></li>
+                <li><a href="mailto:contact@ai.gesti.ro" className="text-gray-600 hover:text-blue-500 text-sm">📧 Email</a></li>
                 <li><a href="/legal/privacy" className="text-gray-600 hover:text-blue-500 text-sm">Politica de confidențialitate</a></li>
                 <li><a href="/legal/terms" className="text-gray-600 hover:text-blue-500 text-sm">Termeni și condiții</a></li>
               </ul>

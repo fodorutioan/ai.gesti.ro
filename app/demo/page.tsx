@@ -34,7 +34,7 @@ export default function DemoPage() {
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 max-w-md mx-auto">
                 <p className="text-sm mb-4 font-semibold">Vrei să vezi demo LIVE înainte de lansare?</p>
                 <a 
-                  href="mailto:fodorut.ionut@gmail.com?subject=Demo%20Request%20-%20ai.gesti.ro" 
+                  href="mailto:contact@ai.gesti.ro?subject=Demo%20Request%20-%20ai.gesti.ro" 
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition"
                 >
                   Cere demo personalizat →

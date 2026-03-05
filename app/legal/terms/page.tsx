@@ -221,7 +221,7 @@ export default function TermsPage() {
               Întrebări despre acești Termeni?
             </p>
             <ul className="list-none space-y-2 text-gray-700 mt-4">
-              <li><strong>Email:</strong> <a href="mailto:fodorut.ionut@gmail.com" className="text-blue-600 hover:underline">fodorut.ionut@gmail.com</a></li>
+              <li><strong>Email:</strong> <a href="mailto:contact@ai.gesti.ro" className="text-blue-600 hover:underline">contact@ai.gesti.ro</a></li>
               <li><strong>Companie:</strong> Astrali (Astralitech.com)</li>
               <li><strong>Adresă:</strong> [TBD — va fi completată la lansare]</li>
             </ul>
