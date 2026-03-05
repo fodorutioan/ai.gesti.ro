@@ -8,16 +8,16 @@ export default function HomePage() {
             <div className="text-2xl font-bold">
               <span className="text-gray-900">ai.</span>
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">gesti</span>
-              <span className="text-gray-400">.ro</span>
+              <span className="text-gray-600">.ro</span>
             </div>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#cum-functioneaza" className="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">Cum funcționează</a>
-            <a href="#beneficii" className="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">Beneficii</a>
-            <a href="#faq" className="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">FAQ</a>
-            <a href="#contact" className="nav-link text-sm font-medium text-gray-600 hover:text-gray-900">Contact</a>
+            <a href="#cum-functioneaza" className="text-sm font-medium text-gray-600 hover:text-gray-900">Cum funcționează</a>
+            <a href="#beneficii" className="text-sm font-medium text-gray-600 hover:text-gray-900">Beneficii</a>
+            <a href="#faq" className="text-sm font-medium text-gray-600 hover:text-gray-900">FAQ</a>
+            <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-gray-900">Contact</a>
           </nav>
-          <button className="btn-primary bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-6 py-2.5 rounded-lg font-medium text-sm shadow-blue-glow">
+          <button className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all">
             Acces anticipat →
           </button>
         </div>
@@ -26,7 +26,7 @@ export default function HomePage() {
       {/* Hero Section - IMPROVED COPY */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 gradient-mesh relative overflow-hidden fadeIn">
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl -z-10 animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl -z-10 animate-pulse" style={{animationDelay: \'1s\'}} />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl -z-10 animate-pulse" style={{animationDelay: '1s'}} />
         
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-4xl mx-auto mb-12">
@@ -52,10 +52,10 @@ export default function HomePage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 fadeInUp delay-200">
-              <button className="btn-primary bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-blue-glow">
+              <button className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all min-h-[48px]">
                 Vreau acces anticipat →
               </button>
-              <a href="/demo" className="btn-secondary border-2 border-subtle bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg inline-block shadow-depth-sm">
+              <a href="/demo" className="border-2 border-gray-200 bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg inline-block shadow-md hover:border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all min-h-[48px] flex items-center justify-center">
                 Vizionează demo (2 min)
               </a>
             </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
               { emoji: '✅', step: '04', title: 'Tu doar aprobi', desc: 'Notificare WhatsApp, un click, done. Controlul rămâne al tău. AI face munca grea.' },
             ].map(({ emoji, step, title, desc }) => (
               <div key={step} className="relative group">
-                <div className="card-lift glass border-subtle rounded-2xl p-6 h-full shadow-depth-md hover-glow">
+                <div className="bg-white border border-gray-200 rounded-2xl p-6 h-full shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
                   <div className="absolute top-4 right-4 text-6xl font-black text-gray-200 opacity-30 select-none">{step}</div>
                   <div className="relative z-10">
                     <div className="text-5xl mb-4">{emoji}</div>
@@ -148,7 +148,7 @@ export default function HomePage() {
               { value: '0', label: 'Facturi pierdute', desc: 'totul arhivat automat' },
               { value: '24/7', label: 'Agenți activi', desc: 'nu uită, nu dorm' },
             ].map(({ value, label, desc }) => (
-              <div key={label} className="card-subtle text-center glass-blue border-subtle rounded-2xl p-6 shadow-depth-md">
+              <div key={label} className="card-subtle text-center glass-blue border-gray-200 rounded-2xl p-6 shadow-depth-md">
                 <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">{value}</div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
                 <div className="text-sm text-gray-600">{desc}</div>
@@ -252,7 +252,7 @@ export default function HomePage() {
                 useCase: '10-50 clienți activi, facturare recurentă, colaborare cu contabil.'
               },
             ].map(({ emoji, title, desc, useCase }) => (
-              <div key={title} className="card-lift glass p-8 rounded-2xl border-subtle shadow-depth-lg">
+              <div key={title} className="card-lift glass p-8 rounded-2xl border-gray-200 shadow-xl">
                 <div className="text-5xl mb-4">{emoji}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-3">{desc}</p>
@@ -309,7 +309,7 @@ export default function HomePage() {
                 desc: 'Nu doar vindem produs — educăm utilizatorii despre AI, automatizare, cum să colaborezi eficient cu agenți. Resurse gratuite, ghiduri, suport dedicat pentru a înțelege și stăpâni tehnologia.'
               },
             ].map(({ icon, title, desc }) => (
-              <div key={title} className="card-subtle flex space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white border-subtle rounded-2xl shadow-depth-md">
+              <div key={title} className="card-subtle flex space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white border-gray-200 rounded-2xl shadow-depth-md">
                 <div className="text-4xl flex-shrink-0">{icon}</div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
@@ -402,7 +402,7 @@ export default function HomePage() {
                 a: 'AI-ul nu ia decizii finale de business. Îți arătăm datele sursă și propunerea înainte de aprobare. Pentru acțiuni critice, controlul final rămâne uman.'
               },
             ].map(({ q, a }) => (
-              <div key={q} className="card-subtle glass border-subtle rounded-2xl p-6 shadow-depth-md">
+              <div key={q} className="card-subtle glass border-gray-200 rounded-2xl p-6 shadow-depth-md">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{q}</h3>
                 <p className="text-gray-600 leading-relaxed">{a}</p>
               </div>
@@ -455,7 +455,7 @@ export default function HomePage() {
               placeholder="Email-ul tău" 
               className="flex-1 px-6 py-4 rounded-xl text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 font-medium glass shadow-depth-md transition-smooth"
             />
-            <button className="btn-primary bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-depth-lg">
+            <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all min-h-[48px]">
               Înscrie-mă →
             </button>
           </form>
@@ -488,9 +488,9 @@ export default function HomePage() {
               <div className="text-2xl font-bold mb-4">
                 <span className="text-white">ai.</span>
                 <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">gesti</span>
-                <span className="text-gray-500">.ro</span>
+                <span className="text-gray-600">.ro</span>
               </div>
-              <p className="text-gray-400 leading-relaxed mb-6">
+              <p className="text-gray-600 leading-relaxed mb-6">
                 Automatizare inteligentă pentru ERP-urile moderne. Dezvoltat de{' '}
                 <a href="https://astralitech.com" className="text-blue-400 hover:underline">Astrali</a>, 
                 compania din spatele <a href="https://gesti.ro" className="text-blue-400 hover:underline">gesti.ro</a>.
@@ -504,18 +504,18 @@ export default function HomePage() {
             <div>
               <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Produse</h3>
               <ul className="space-y-3">
-                <li><a href="https://gesti.ro" className="text-gray-400 hover:text-blue-400 text-sm">gesti.ro — ERP Cloud</a></li>
-                <li><a href="https://ai.gesti.ro" className="text-gray-400 hover:text-blue-400 text-sm">ai.gesti.ro — Agenți AI</a></li>
-                <li><a href="https://astralitech.com" className="text-gray-400 hover:text-blue-400 text-sm">Astrali — Compania mamă</a></li>
+                <li><a href="https://gesti.ro" className="text-gray-600 hover:text-blue-500 text-sm">gesti.ro — ERP Cloud</a></li>
+                <li><a href="https://ai.gesti.ro" className="text-gray-600 hover:text-blue-500 text-sm">ai.gesti.ro — Agenți AI</a></li>
+                <li><a href="https://astralitech.com" className="text-gray-600 hover:text-blue-500 text-sm">Astrali — Compania mamă</a></li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Contact & Legal</h3>
               <ul className="space-y-3">
-                <li><a href="mailto:fodorut.ionut@gmail.com" className="text-gray-400 hover:text-blue-400 text-sm">📧 Email</a></li>
-                <li><a href="/legal/privacy" className="text-gray-400 hover:text-blue-400 text-sm">Politica de confidențialitate</a></li>
-                <li><a href="/legal/terms" className="text-gray-400 hover:text-blue-400 text-sm">Termeni și condiții</a></li>
+                <li><a href="mailto:fodorut.ionut@gmail.com" className="text-gray-600 hover:text-blue-500 text-sm">📧 Email</a></li>
+                <li><a href="/legal/privacy" className="text-gray-600 hover:text-blue-500 text-sm">Politica de confidențialitate</a></li>
+                <li><a href="/legal/terms" className="text-gray-600 hover:text-blue-500 text-sm">Termeni și condiții</a></li>
               </ul>
             </div>
           </div>
