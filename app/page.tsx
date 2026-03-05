@@ -29,106 +29,72 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl -z-10 animate-pulse" style={{animationDelay: '1s'}} />
         
         <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-4xl mx-auto mb-12">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200/50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <span>✨</span>
-              <span>Automatizare Inteligentă</span>
+          <div className="grid lg:grid-cols-2 gap-10 items-center mb-12">
+            <div>
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200/50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                <span>✨</span>
+                <span>Autopilot pentru operațiuni</span>
+              </div>
+
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                În 10 minute, factura ajunge din WhatsApp în gesti.ro.
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-clip-text text-transparent block mt-2">
+                  Tu aprobi. AI execută.
+                </span>
+              </h1>
+
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                Un singur flux: primire document, verificare automată, propunere de plată.
+                <strong className="text-gray-900 block mt-2">Fără copy-paste. Fără blocaje operaționale.</strong>
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a href="/demo" className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transition-all text-center">
+                  Vezi demo (2 min)
+                </a>
+                <a href="#demo-live" className="border-2 border-gray-200 bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg inline-block shadow-md hover:border-gray-300 hover:bg-gray-50 transition-all text-center">
+                  Cere demo live
+                </a>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+                <span>⚡ Implementare în 48h</span>
+                <span>🔒 Date stocate în UE</span>
+                <span>🇷🇴 Suport în română</span>
+              </div>
             </div>
-            
-            {/* IMPROVED HEADLINE (Gavriil) */}
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              În 10 minute, factura ajunge din WhatsApp în gesti.ro — fără copy-paste.
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-clip-text text-transparent block mt-2">
-                Tu validezi. AI execută.
-              </span>
-            </h1>
-            
-            {/* IMPROVED SUBHEADLINE (Gavriil) */}
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Trimiți documentul pe WhatsApp, iar agenții AI fac prelucrarea, verificarea și pregătirea de plată în <strong className="text-blue-600">același flux</strong>.
-              <strong className="text-gray-900 block mt-2">Mai puțină birocrație. Mai mult timp pentru vânzări și clienți.</strong>
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 fadeInUp delay-200">
-              <button className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all min-h-[48px]">
-                Vreau acces anticipat →
-              </button>
-              <a href="/demo" className="border-2 border-gray-200 bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg inline-block shadow-md hover:border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all min-h-[48px] flex items-center justify-center">
-                Vizionează demo (2 min)
-              </a>
-            </div>
-            
-            {/* IMPROVED TRUST SIGNALS */}
-            <div className="text-sm text-gray-600">
-              <span>⚡ Lansare martie 2026</span>
-              <span className="mx-3">•</span>
-              <span>🔒 Fără carte de credit</span>
-              <span className="mx-3">•</span>
-              <span>📧 Doar update-uri importante</span>
+
+            <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-xl" id="demo-live">
+              <p className="text-sm font-semibold text-blue-700 mb-4">Flux live (exemplu)</p>
+              <div className="space-y-3 text-sm">
+                <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
+                  <p className="font-semibold text-gray-900">1) Input WhatsApp</p>
+                  <p className="text-gray-600">Factura primită și citită automat.</p>
+                </div>
+                <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
+                  <p className="font-semibold text-gray-900">2) Validare</p>
+                  <p className="text-gray-600">Suma, scadența și furnizorul sunt verificate.</p>
+                </div>
+                <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
+                  <p className="font-semibold text-gray-900">3) Aprobare finală</p>
+                  <p className="text-gray-600">Primești rezumatul, aprobi cu un click.</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Trust Signals */}
-          <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-600">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { emoji: '⚡', text: 'Implementare în 48h' },
-              { emoji: '🇷🇴', text: 'Produs în România' },
-              { emoji: '🔒', text: 'Date stocate în UE' },
-              { emoji: '📞', text: 'Suport în română' },
-            ].map(({ emoji, text }) => (
-              <div key={text} className="flex items-center space-x-2">
-                <span className="text-lg">{emoji}</span>
-                <span className="font-medium">{text}</span>
+              { value: '1.284', label: 'documente procesate azi' },
+              { value: '312h', label: 'economisite săptămâna asta' },
+              { value: '98.7%', label: 'acuratețe extracție date' },
+              { value: '<10m', label: 'de la document la aprobare' },
+            ].map(({ value, label }) => (
+              <div key={label} className="bg-white border border-gray-200 rounded-xl p-4 text-center shadow-depth-md">
+                <p className="text-2xl font-bold text-gray-900">{value}</p>
+                <p className="text-xs text-gray-600 mt-1">{label}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Iterația 3 — Dovadă rapidă */}
-      <section id="demo-live" className="py-16 bg-gradient-to-b from-white to-blue-50/40 px-4 sm:px-6 lg:px-8 border-y border-blue-100/60">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="inline-flex items-center space-x-2 bg-blue-50 border border-blue-200 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              <span>Iterația nouă</span>
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Ce vezi concret în primele 10 minute</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Am făcut fluxul mai clar: input unic pe WhatsApp, verificare automată, aprobare finală umană.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {[
-              {
-                t: 'Minutul 0-2',
-                title: 'Documentul intră în flux',
-                d: 'Trimiți factura pe WhatsApp. AI extrage datele și identifică furnizorul.',
-              },
-              {
-                t: 'Minutul 2-5',
-                title: 'Validare automată',
-                d: 'Suma, data scadentă și câmpurile critice sunt verificate înainte de propunerea de plată.',
-              },
-              {
-                t: 'Minutul 5-10',
-                title: 'Tu aprobi, sistemul execută',
-                d: 'Primești rezumatul și confirmi dintr-un click. Controlul rămâne la tine.',
-              },
-            ].map((item) => (
-              <div key={item.t} className="bg-white rounded-2xl border border-gray-200 p-6 shadow-depth-md">
-                <p className="text-xs font-bold text-blue-600 mb-2 uppercase tracking-wide">{item.t}</p>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{item.d}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/demo" className="bg-gray-900 text-white px-6 py-3 rounded-xl font-semibold text-base hover:bg-black transition-all text-center">
-              Vezi demo acum
-            </a>
-            <a href="mailto:contact@ai.gesti.ro" className="bg-white border-2 border-gray-200 text-gray-800 px-6 py-3 rounded-xl font-semibold text-base hover:border-gray-300 transition-all text-center">
-              Cere demo live cu echipa
-            </a>
           </div>
         </div>
       </section>
