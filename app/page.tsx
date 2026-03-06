@@ -551,18 +551,29 @@ export default function HomePage() {
             </div>
           </div>
           
-          <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto mb-6 fadeInUp delay-300">
+          <form action="/api/lead" method="POST" className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto mb-6 fadeInUp delay-300">
+            <input type="hidden" name="source" value="homepage-early-access" />
+            <input
+              type="text"
+              name="company"
+              tabIndex={-1}
+              autoComplete="off"
+              className="hidden"
+              aria-hidden="true"
+            />
             <input 
-              type="email" 
+              type="email"
+              name="email"
+              required
               placeholder="Email-ul tău" 
               className="flex-1 px-6 py-4 rounded-xl text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 font-medium glass shadow-depth-md transition-smooth"
             />
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all min-h-[48px]">
+            <button type="submit" className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all min-h-[48px]">
               Înscrie-mă →
             </button>
           </form>
           <p className="text-sm text-blue-100">
-            Nu spam. Doar update-uri importante despre lansare. Poți anula oricând.
+            Formular activ: trimite lead-ul în backend (și webhook dacă e configurat). Fără spam.
           </p>
           
           <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-sm text-blue-100">
