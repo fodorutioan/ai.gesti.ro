@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Primul angajat virtual din firma ta — ai.gesti.ro',
-    description: 'Trimite factura pe WhatsApp. AI o procesează. Tu doar aprobi. Automatizare inteligentă pentru ERP-uri mici și mijlocii.',
-    images: [{ url: '/og-image.svg', width: 1200, height: 630 }],
+    description: 'Automatizare operațională în WhatsApp și Telegram, integrată cu gesti.ro. Tu aprobi. AI execută.',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
     type: 'website',
     locale: 'ro_RO',
     siteName: 'ai.gesti.ro',
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'ai.gesti.ro — Agentic Business Automation',
-    description: 'Primul angajat virtual care nu costă un salariu. De la factură la plată, printr-un simplu mesaj.',
-    images: ['/og-image.svg'],
+    description: 'Automatizare operațională în WhatsApp și Telegram, integrată cu gesti.ro.',
+    images: ['/twitter-image'],
   },
   icons: {
     icon: '/favicon.svg',
