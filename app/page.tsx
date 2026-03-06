@@ -48,13 +48,22 @@ export default function HomePage() {
                 <strong className="text-gray-900 block mt-2">Fără copy-paste. Fără blocaje operaționale.</strong>
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row gap-4 mb-5">
                 <a href="/demo" className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transition-all text-center">
-                  Vezi demo (2 min)
+                  Vezi demo rapid (2 min)
                 </a>
                 <a href="#demo-live" className="border-2 border-gray-200 bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg inline-block shadow-md hover:border-gray-300 hover:bg-gray-50 transition-all text-center">
-                  Cere demo live
+                  Programează demo live (15 min)
                 </a>
+              </div>
+
+              <div className="mb-8 rounded-xl border border-blue-100 bg-blue-50/60 px-4 py-3">
+                <p className="text-xs font-semibold text-blue-700 mb-2 uppercase tracking-wide">Ce vezi în demo live</p>
+                <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-700">
+                  <span>• Flux complet WhatsApp → gesti.ro</span>
+                  <span>• Validare + aprobare în timp real</span>
+                  <span>• Setup recomandat pentru firma ta</span>
+                </div>
               </div>
 
               <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
@@ -72,7 +81,7 @@ export default function HomePage() {
                 </span>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-3 mb-4">
                 {[
                   {
                     icon: '💬',
@@ -114,6 +123,10 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
+
+              <a href="#contact" className="block w-full text-center bg-gray-900 text-white text-sm font-semibold rounded-lg px-4 py-2.5 hover:bg-gray-800 transition-colors">
+                Vreau demo live
+              </a>
             </div>
           </div>
 
