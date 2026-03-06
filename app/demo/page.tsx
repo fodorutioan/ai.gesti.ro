@@ -10,16 +10,16 @@ export default function DemoPage() {
             <span>🎥</span>
             <span>Demo Video</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Cum funcționează ai.gesti.ro
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Urmărește demonstrația completă: de la trimiterea facturii pe WhatsApp până la pregătirea plății în gesti.ro.
           </p>
         </div>
 
         {/* Video Placeholder */}
-        <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-xl mb-12">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-slate-700 p-8 shadow-xl mb-12">
           <div className="aspect-video bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center relative overflow-hidden">
             {/* Decorative blobs */}
             <div className="absolute top-0 left-0 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl" />
@@ -31,11 +31,11 @@ export default function DemoPage() {
               <p className="text-xl text-blue-100 mb-8">
                 Înregistrăm demonstrația completă pentru lansarea din martie 2026.
               </p>
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 max-w-md mx-auto">
+              <div className="bg-white dark:bg-slate-900/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 max-w-md mx-auto">
                 <p className="text-sm mb-4 font-semibold">Vrei să vezi demo LIVE înainte de lansare?</p>
                 <a 
                   href="mailto:contact@ai.gesti.ro?subject=Demo%20Request%20-%20ai.gesti.ro" 
-                  className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition"
+                  className="inline-block bg-white dark:bg-slate-900 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition"
                 >
                   Cere demo personalizat →
                 </a>
@@ -45,8 +45,8 @@ export default function DemoPage() {
         </div>
 
         {/* What you'll see */}
-        <div className="bg-white rounded-2xl border border-gray-200 p-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Ce vei vedea în demo:</h2>
+        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-slate-700 p-8 mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Ce vei vedea în demo:</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
@@ -80,11 +80,11 @@ export default function DemoPage() {
                 desc: 'Rapoarte real-time: facturi procesate, plăți pending, savings timp'
               },
             ].map(({ icon, title, desc }) => (
-              <div key={title} className="flex space-x-4 p-4 bg-gray-50 rounded-xl">
+              <div key={title} className="flex space-x-4 p-4 bg-gray-50 dark:bg-slate-900/60 rounded-xl">
                 <div className="text-4xl flex-shrink-0">{icon}</div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-                  <p className="text-gray-600 text-sm">{desc}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">{title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">{desc}</p>
                 </div>
               </div>
             ))}
@@ -128,7 +128,7 @@ export default function DemoPage() {
               <p><strong>Vineri, 14 martie, 09:00</strong> — Plata procesată automat. Factură închisă. Totul documentat în gesti.ro.</p>
             </div>
           </div>
-          <div className="mt-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
+          <div className="mt-8 bg-white dark:bg-slate-900/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
             <p className="text-sm mb-0">
               <strong>Total timp investit de tine:</strong> ~3 minute (vs. 30-45 min manual)
               <br/>
@@ -138,11 +138,11 @@ export default function DemoPage() {
         </div>
 
         {/* CTA */}
-        <div className="text-center bg-white rounded-2xl border border-gray-200 p-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className="text-center bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-slate-700 p-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Convins? Înscrie-te pentru early access
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
             Primii 100 utilizatori primesc <strong className="text-blue-600">50% reducere primul an</strong> + onboarding personalizat.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
@@ -155,7 +155,7 @@ export default function DemoPage() {
               Înscrie-mă →
             </button>
           </div>
-          <p className="text-sm text-gray-500 mt-4">
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
             Nu spam. Doar update-uri despre lansare. Poți anula oricând.
           </p>
         </div>
