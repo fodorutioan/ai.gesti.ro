@@ -98,6 +98,23 @@ Homepage signup trimite în `POST /api/lead`.
 
 Fallback: dacă `LEAD_WEBHOOK_URL` lipsește, lead-ul este logat server-side.
 
+## 🧪 A/B Testing + Analytics Setup
+
+Framework minim este activ pe CTA hero (`cta_split_v1`):
+- variantă A: accent pe demo rapid
+- variantă B: accent pe demo live
+- persistă în `localStorage`
+- override manual: `?ab=A` / `?ab=B`
+
+Evenimentele se trimit la `POST /api/analytics`:
+- `experiment_view`
+- `cta_click`
+
+Opțional:
+- `ANALYTICS_WEBHOOK_URL` pentru forward evenimente în pipeline extern
+- `NEXT_PUBLIC_CLARITY_ID` pentru heatmaps/session replay (Microsoft Clarity)
+- `NEXT_PUBLIC_HOTJAR_ID` pentru heatmaps/session replay (Hotjar)
+
 ---
 
 ## 🔗 Links
