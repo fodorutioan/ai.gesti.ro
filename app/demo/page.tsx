@@ -149,7 +149,7 @@ export default function DemoPage() {
             <input 
               type="email" 
               placeholder="Email-ul tău" 
-              className="flex-1 px-6 py-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="flex-1 px-6 py-4 rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
             <button className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition">
               Înscrie-mă →

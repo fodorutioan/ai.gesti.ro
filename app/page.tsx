@@ -104,7 +104,7 @@ Operațiunile intră din WhatsApp sau Telegram în gesti.ro în 10 minute.
                   },
                 ].map((step, idx) => (
                   <div key={step.title} className="relative rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-900/60/70 dark:bg-slate-900/70 p-3.5">
-                    {idx < 4 && <div className="absolute left-7 top-[calc(100%+2px)] h-3 w-px bg-gray-300" />}
+                    {idx < 4 && <div className="absolute left-7 top-[calc(100%+2px)] h-3 w-px bg-gray-300 dark:bg-slate-600" />}
                     <div className="flex gap-3 items-start">
                       <div className="h-8 w-8 rounded-lg bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 flex items-center justify-center text-sm shadow-sm flex-shrink-0">
                         {step.icon}
