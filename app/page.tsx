@@ -44,7 +44,7 @@ export default function HomePage({
               </div>
 
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-5 leading-[1.08] tracking-tight max-w-[16ch]">
-                Facturile intră din WhatsApp în gesti.ro în 10 minute.
+Operațiunile intră din WhatsApp sau Telegram în gesti.ro în 10 minute.
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-clip-text text-transparent block mt-2 text-[0.92em]">
                   Tu aprobi. AI execută.
                 </span>
@@ -67,9 +67,13 @@ export default function HomePage({
               <div className="mb-8 rounded-xl border border-blue-100 bg-blue-50/60 px-4 py-3">
                 <p className="text-xs font-semibold text-blue-700 mb-2 uppercase tracking-wide">Ce vezi în demo live</p>
                 <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-700">
-                  <span>• Flux complet WhatsApp → gesti.ro</span>
+                  <span>• Flux complet WhatsApp/Telegram → gesti.ro</span>
                   <span>• Validare + aprobare în timp real</span>
                   <span>• Setup recomandat pentru firma ta</span>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                  <span className="px-2 py-1 rounded-full border border-green-200 bg-green-50 text-green-700">🟢 WhatsApp</span>
+                  <span className="px-2 py-1 rounded-full border border-sky-200 bg-sky-50 text-sky-700">🔵 Telegram</span>
                 </div>
               </div>
 
@@ -92,8 +96,8 @@ export default function HomePage({
                 {[
                   {
                     icon: '💬',
-                    title: 'Primești documentul pe WhatsApp',
-                    desc: 'Poză, PDF sau factură trimisă în conversație.',
+                    title: 'Primești cererea pe WhatsApp sau Telegram',
+                    desc: 'Factură, cerere client, comandă sau document trimis în conversație.',
                   },
                   {
                     icon: '🔎',
@@ -164,16 +168,16 @@ export default function HomePage({
               Patru pași simpli. Zero învățare.
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Procesare automată a facturilor direct din WhatsApp, integrată cu gesti.ro ERP.
+Automatizare operațională direct din WhatsApp și Telegram, integrată cu gesti.ro ERP.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { emoji: '📄', step: '01', title: 'Primești document', desc: 'Factură, contract sau chitanță — email, foto sau PDF prin WhatsApp.' },
-              { emoji: '💬', step: '02', title: 'Trimiți pe WhatsApp', desc: 'Interfață naturală. Vorbești cu agenții ca și cu un coleg. Zero învățare.' },
-              { emoji: '🤖', step: '03', title: 'AI procesează instant', desc: 'Citire automată date, arhivare în gesti.ro, verificare cont furnizor, pregătire plată.' },
-              { emoji: '✅', step: '04', title: 'Tu doar aprobi', desc: 'Notificare WhatsApp, un click, done. Controlul rămâne al tău. AI face munca grea.' },
+              { emoji: '📄', step: '01', title: 'Primești input operațional', desc: 'Factură, comandă, cerere client sau document — email, foto, PDF în WhatsApp/Telegram.' },
+              { emoji: '💬', step: '02', title: 'Trimiți în chat', desc: 'WhatsApp sau Telegram. Interfață naturală, zero învățare pentru echipă.' },
+              { emoji: '🤖', step: '03', title: 'AI procesează instant', desc: 'Extrage date, arhivează în gesti.ro, pregătește pașii următori și propune acțiuni.' },
+              { emoji: '✅', step: '04', title: 'Tu aprobi', desc: 'Primești notificare în chat, aprobi cu un click. Controlul final rămâne la tine.' },
             ].map(({ emoji, step, title, desc }) => (
               <div key={step} className="relative group">
                 <div className="bg-white border border-gray-200 rounded-2xl p-6 h-full shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
@@ -185,6 +189,28 @@ export default function HomePage({
                     <p className="text-gray-600 leading-relaxed text-sm">{desc}</p>
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-16 bg-gray-50/60 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Nu e doar pentru facturi</h3>
+            <p className="text-gray-600">Același flux funcționează pentru mai multe procese operaționale în chat.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-5">
+            {[
+              { title: '📄 Documente financiare', desc: 'Facturi, chitanțe, extrase, verificări și aprobare plată.' },
+              { title: '🛒 Comenzi & aprovizionare', desc: 'Comenzi furnizori, status livrare, validări și follow-up.' },
+              { title: '🎫 Cereri interne', desc: 'Solicitări echipă, taskuri administrative, notificări și tracking.' },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-depth-md">
+                <p className="font-semibold text-gray-900 mb-2">{item.title}</p>
+                <p className="text-sm text-gray-600">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -269,7 +295,7 @@ export default function HomePage({
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start space-x-2">
                     <span className="text-green-500 mt-1">•</span>
-                    <span>Primești factură → forward pe WhatsApp</span>
+                    <span>Primești factură/cerere → forward pe WhatsApp sau Telegram</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-green-500 mt-1">•</span>
@@ -454,7 +480,7 @@ export default function HomePage({
               {
                 name: 'Radu T.',
                 role: 'Distribuție',
-                quote: 'Fluxul WhatsApp + aprobare finală ne-a eliminat blocajele interne.',
+                quote: 'Fluxul WhatsApp/Telegram + aprobare finală ne-a eliminat blocajele interne.',
                 metric: 'de la 2 zile la <10 minute',
               },
             ].map((t) => (
@@ -492,7 +518,7 @@ export default function HomePage({
               },
               {
                 q: 'Ce se întâmplă cu datele mele?',
-                a: 'Datele sunt stocate în UE (GDPR compliant). AI-ul citește doar ce trimiți explicit pe WhatsApp. Nu accesăm alte conversații.'
+                a: 'Datele sunt stocate în UE (GDPR compliant). AI-ul citește doar ce trimiți explicit pe WhatsApp sau Telegram. Nu accesăm alte conversații.'
               },
               {
                 q: 'Pot să anulez oricând?',
