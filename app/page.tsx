@@ -36,9 +36,9 @@ export default function HomePage() {
                 <span>Autopilot pentru operațiuni</span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                În 10 minute, factura ajunge din WhatsApp în gesti.ro.
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-clip-text text-transparent block mt-2">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-5 leading-[1.08] tracking-tight max-w-[16ch]">
+                Facturile intră din WhatsApp în gesti.ro în 10 minute.
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-clip-text text-transparent block mt-2 text-[0.92em]">
                   Tu aprobi. AI execută.
                 </span>
               </h1>
@@ -65,7 +65,7 @@ export default function HomePage() {
             </div>
 
             <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-xl" id="demo-live">
-              <p className="text-sm font-semibold text-blue-700 mb-4">Flux live (exemplu)</p>
+              <p className="text-sm font-semibold text-blue-700 mb-4">Flux demo</p>
               <div className="space-y-3 text-sm">
                 <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
                   <p className="font-semibold text-gray-900">1) Input WhatsApp</p>
