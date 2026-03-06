@@ -10,22 +10,22 @@ export default function HomePage({
   const leadStatus = Array.isArray(leadParam) ? leadParam[0] : leadParam
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white dark:bg-slate-900">
       {/* Header */}
-      <header className="fixed top-0 w-full z-[100] border-b border-gray-200 bg-white/95 backdrop-blur-md shadow-md">
+      <header className="fixed top-0 w-full z-[100] border-b border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900/95 backdrop-blur-md shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="text-2xl font-bold">
-              <span className="text-gray-900">ai.</span>
+              <span className="text-gray-900 dark:text-gray-100">ai.</span>
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">gesti</span>
-              <span className="text-gray-600">.ro</span>
+              <span className="text-gray-600 dark:text-gray-300">.ro</span>
             </div>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#cum-functioneaza" className="text-sm font-medium text-gray-600 hover:text-gray-900">Cum funcționează</a>
-            <a href="#beneficii" className="text-sm font-medium text-gray-600 hover:text-gray-900">Beneficii</a>
-            <a href="#faq" className="text-sm font-medium text-gray-600 hover:text-gray-900">FAQ</a>
-            <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-gray-900">Contact</a>
+            <a href="#cum-functioneaza" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-gray-100">Cum funcționează</a>
+            <a href="#beneficii" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-gray-100">Beneficii</a>
+            <a href="#faq" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-gray-100">FAQ</a>
+            <a href="#contact" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:text-gray-100">Contact</a>
           </nav>
           <a href="#demo-live" className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-[length:200%_auto] animate-gradient-shift text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all inline-block">
             Cere demo live →
@@ -46,28 +46,28 @@ export default function HomePage({
                 <span>Autopilot pentru operațiuni</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-5 leading-[1.08] tracking-tight max-w-[16ch]">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-5 leading-[1.08] tracking-tight max-w-[16ch]">
 Operațiunile intră din WhatsApp sau Telegram în gesti.ro în 10 minute.
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-clip-text text-transparent block mt-2 text-[0.92em]">
                   Tu aprobi. AI execută.
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                 Un singur flux: primire document, verificare automată, propunere de plată.
-                <strong className="text-gray-900 block mt-2">Fără copy-paste. Fără blocaje operaționale.</strong>
+                <strong className="text-gray-900 dark:text-gray-100 block mt-2">Fără copy-paste. Fără blocaje operaționale.</strong>
               </p>
 
               <HeroCtas />
 
-              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 dark:text-gray-300">
                 <span>⚡ Implementare în 48h</span>
                 <span>🔒 Date stocate în UE</span>
                 <span>🇷🇴 Suport în română</span>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-xl" id="demo-live">
+            <div className="bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-xl" id="demo-live">
               <div className="flex items-center justify-between mb-5">
                 <p className="text-sm font-semibold text-blue-700">Flux demo</p>
                 <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-100">
@@ -103,15 +103,15 @@ Operațiunile intră din WhatsApp sau Telegram în gesti.ro în 10 minute.
                     desc: 'Document arhivat, status actualizat, notificare finală.',
                   },
                 ].map((step, idx) => (
-                  <div key={step.title} className="relative rounded-xl border border-gray-200 bg-gray-50/70 p-3.5">
+                  <div key={step.title} className="relative rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-900/60/70 dark:bg-slate-900/70 p-3.5">
                     {idx < 4 && <div className="absolute left-7 top-[calc(100%+2px)] h-3 w-px bg-gray-300" />}
                     <div className="flex gap-3 items-start">
-                      <div className="h-8 w-8 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-sm shadow-sm flex-shrink-0">
+                      <div className="h-8 w-8 rounded-lg bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 flex items-center justify-center text-sm shadow-sm flex-shrink-0">
                         {step.icon}
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-gray-900">{idx + 1}. {step.title}</p>
-                        <p className="text-xs text-gray-600 mt-0.5">{step.desc}</p>
+                        <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{idx + 1}. {step.title}</p>
+                        <p className="text-xs text-gray-600 dark:text-gray-300 mt-0.5">{step.desc}</p>
                       </div>
                     </div>
                   </div>
@@ -131,9 +131,9 @@ Operațiunile intră din WhatsApp sau Telegram în gesti.ro în 10 minute.
               { value: '98.7%', label: 'acuratețe extracție date' },
               { value: '<10m', label: 'de la document la aprobare' },
             ].map(({ value, label }) => (
-              <div key={label} className="bg-white border border-gray-200 rounded-xl p-4 text-center shadow-depth-md">
-                <p className="text-2xl font-bold text-gray-900">{value}</p>
-                <p className="text-xs text-gray-600 mt-1">{label}</p>
+              <div key={label} className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl p-4 text-center shadow-depth-md">
+                <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">{value}</p>
+                <p className="text-xs text-gray-600 dark:text-gray-300 mt-1">{label}</p>
               </div>
             ))}
           </div>
@@ -141,16 +141,16 @@ Operațiunile intră din WhatsApp sau Telegram în gesti.ro în 10 minute.
       </section>
 
       {/* How It Works - IMPROVED */}
-      <section id="cum-functioneaza" className="py-20 bg-white px-4 sm:px-6 lg:px-8">
+      <section id="cum-functioneaza" className="py-20 bg-white dark:bg-slate-900 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200/50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <span>Cum funcționează</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Patru pași simpli. Zero învățare.
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
 Automatizare operațională direct din WhatsApp și Telegram, integrată cu gesti.ro ERP.
             </p>
           </div>
@@ -163,13 +163,13 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
               { emoji: '✅', step: '04', title: 'Tu aprobi', desc: 'Primești notificare în chat, aprobi cu un click. Controlul final rămâne la tine.' },
             ].map(({ emoji, step, title, desc }) => (
               <div key={step} className="relative group">
-                <div className="bg-white border border-gray-200 rounded-2xl p-6 h-full shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <div className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-2xl p-6 h-full shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
                   <div className="absolute top-4 right-4 text-6xl font-black text-gray-200 opacity-30 select-none">{step}</div>
                   <div className="relative z-10">
                     <div className="text-5xl mb-4">{emoji}</div>
                     <div className="text-sm font-bold text-blue-600 mb-2">{step}</div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-                    <p className="text-gray-600 leading-relaxed text-sm">{desc}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">{title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">{desc}</p>
                   </div>
                 </div>
               </div>
@@ -179,11 +179,11 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
       </section>
 
       {/* Use Cases */}
-      <section className="py-16 bg-gray-50/60 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+      <section className="py-16 bg-gray-50 dark:bg-slate-900/60 px-4 sm:px-6 lg:px-8 border-t border-gray-100 dark:border-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Nu e doar pentru facturi</h3>
-            <p className="text-gray-600">Același flux funcționează pentru mai multe procese operaționale în chat.</p>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-3">Nu e doar pentru facturi</h3>
+            <p className="text-gray-600 dark:text-gray-300">Același flux funcționează pentru mai multe procese operaționale în chat.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {[
@@ -191,9 +191,9 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
               { title: '🛒 Comenzi & aprovizionare', desc: 'Comenzi furnizori, status livrare, validări și follow-up.' },
               { title: '🎫 Cereri interne', desc: 'Solicitări echipă, taskuri administrative, notificări și tracking.' },
             ].map((item) => (
-              <div key={item.title} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-depth-md">
-                <p className="font-semibold text-gray-900 mb-2">{item.title}</p>
-                <p className="text-sm text-gray-600">{item.desc}</p>
+              <div key={item.title} className="rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 shadow-depth-md">
+                <p className="font-semibold text-gray-900 dark:text-gray-100 mb-2">{item.title}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -201,16 +201,16 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
       </section>
 
       {/* Benefits / Stats */}
-      <section id="beneficii" className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6 lg:px-8">
+      <section id="beneficii" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-950 dark:to-slate-900 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200/50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <span>Beneficii</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Rezultate reale, măsurabile
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Cifre care vorbesc singure. Timpul tău înapoi, fără să pierzi controlul.
             </p>
           </div>
@@ -223,26 +223,26 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
               { value: '0', label: 'Facturi pierdute', desc: 'totul arhivat automat' },
               { value: '24/7', label: 'Agenți activi', desc: 'nu uită, nu dorm' },
             ].map(({ value, label, desc }) => (
-              <div key={label} className="card-subtle text-center glass-blue border-gray-200 rounded-2xl p-6 shadow-depth-md">
+              <div key={label} className="card-subtle text-center glass-blue border-gray-200 dark:border-slate-700 rounded-2xl p-6 shadow-depth-md">
                 <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">{value}</div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
-                <div className="text-sm text-gray-600">{desc}</div>
+                <div className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">{label}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">{desc}</div>
               </div>
             ))}
           </div>
 
           {/* NEW: Before/After Comparison (Gavriil) */}
           <div className="mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 text-center mb-12">
               Înainte vs. Cu ai.gesti.ro
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-red-50/60 border border-red-100 rounded-2xl p-8 shadow-depth-md fadeInUp">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="text-3xl">❌</div>
-                  <h4 className="text-xl font-bold text-gray-900">Fără ai.gesti.ro</h4>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100">Fără ai.gesti.ro</h4>
                 </div>
-                <ul className="space-y-3 text-gray-700">
+                <ul className="space-y-3 text-gray-700 dark:text-gray-200">
                   <li className="flex items-start space-x-2">
                     <span className="text-red-500 mt-1">•</span>
                     <span>Primești factură pe email → o salvezi manual</span>
@@ -273,9 +273,9 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
               <div className="bg-green-50/60 border border-green-100 rounded-2xl p-8 shadow-depth-md fadeInUp delay-200">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="text-3xl">✅</div>
-                  <h4 className="text-xl font-bold text-gray-900">Cu ai.gesti.ro</h4>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100">Cu ai.gesti.ro</h4>
                 </div>
-                <ul className="space-y-3 text-gray-700">
+                <ul className="space-y-3 text-gray-700 dark:text-gray-200">
                   <li className="flex items-start space-x-2">
                     <span className="text-green-500 mt-1">•</span>
                     <span>Primești factură/cerere → forward pe WhatsApp sau Telegram</span>
@@ -327,11 +327,11 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
                 useCase: '10-50 clienți activi, facturare recurentă, colaborare cu contabil.'
               },
             ].map(({ emoji, title, desc, useCase }) => (
-              <div key={title} className="card-lift glass p-8 rounded-2xl border-gray-200 shadow-xl">
+              <div key={title} className="card-lift glass p-8 rounded-2xl border-gray-200 dark:border-slate-700 shadow-xl">
                 <div className="text-5xl mb-4">{emoji}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-3">{desc}</p>
-                <p className="text-sm text-gray-500 italic">Use case: {useCase}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">{title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-3">{desc}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 italic">Use case: {useCase}</p>
               </div>
             ))}
           </div>
@@ -339,17 +339,17 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
       </section>
 
       {/* Ethics / Philosophy - IMPROVED */}
-      <section className="py-20 bg-white px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+      <section className="py-20 bg-white dark:bg-slate-900 px-4 sm:px-6 lg:px-8 border-t border-gray-100 dark:border-slate-800">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200/50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <span>Filozofia noastră</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Tehnologie în slujba omului
             </h2>
             {/* IMPROVED INTRO (Gavriil) */}
-            <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 dark:text-gray-200 leading-relaxed max-w-3xl mx-auto">
               Știm că AI-ul ridică întrebări legitime despre viitorul muncii. <strong>Mulți oameni se tem de automatizare</strong> — și au dreptate să pună întrebări.
               <br/><br/>
               De aceea ne angajăm să fim <strong>transparenți, empatici și responsabili</strong> în tot ce facem. Nu vindem utopii. Vindem soluții reale, cu bunele intenții în inimă.
@@ -384,11 +384,11 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
                 desc: 'Nu doar vindem produs — educăm utilizatorii despre AI, automatizare, cum să colaborezi eficient cu agenți. Resurse gratuite, ghiduri, suport dedicat pentru a înțelege și stăpâni tehnologia.'
               },
             ].map(({ icon, title, desc }) => (
-              <div key={title} className="card-subtle flex space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white border-gray-200 rounded-2xl shadow-depth-md">
+              <div key={title} className="card-subtle flex space-x-4 p-6 bg-gradient-to-br from-gray-50 to-white dark:from-slate-950 dark:to-slate-900 border-gray-200 dark:border-slate-700 rounded-2xl shadow-depth-md">
                 <div className="text-4xl flex-shrink-0">{icon}</div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">{desc}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">{title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">{desc}</p>
                 </div>
               </div>
             ))}
@@ -396,8 +396,8 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="bg-red-50/60 border border-red-100 rounded-2xl p-6 shadow-depth-md fadeInUp">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Ce NU face AI-ul</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Ce NU face AI-ul</h3>
+              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-200">
                 <li>• Nu aprobă plăți în locul tău</li>
                 <li>• Nu trimite bani fără confirmare explicită</li>
                 <li>• Nu ia decizii juridice sau fiscale finale</li>
@@ -406,8 +406,8 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
               </ul>
             </div>
             <div className="bg-blue-50/60 border border-blue-100 rounded-2xl p-6 shadow-depth-md fadeInUp delay-200">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cum verifici deciziile AI</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">Cum verifici deciziile AI</h3>
+              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-200">
                 <li>1. Vezi sursa datelor extrase (factură/document)</li>
                 <li>2. Primești rezumat clar: ce propune AI și de ce</li>
                 <li>3. Aprobi sau respingi înainte de orice acțiune critică</li>
@@ -416,7 +416,7 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
           </div>
 
           {/* IMPROVED CLOSING (Gavriil) */}
-          <p className="text-center text-lg text-gray-600 italic mb-8">
+          <p className="text-center text-lg text-gray-600 dark:text-gray-300 italic mb-8">
             Nu vindem utopii. Vindem soluții reale, construite cu <strong>responsabilitate, empatie și respect pentru oameni</strong>.
             <br/>
             Dacă ești sceptic față de AI, <strong>e OK. Vrem să vorbim cu tine.</strong> 📧{' '}
@@ -425,7 +425,7 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
 
           {/* CTA pentru ethics section (Rafail recommendation) */}
           <div className="mt-8 text-center">
-            <p className="text-gray-700 text-base">
+            <p className="text-gray-700 dark:text-gray-200 text-base">
               Ai întrebări despre cum folosim AI responsabil?{' '}
               <a href="mailto:contact@ai.gesti.ro" className="text-blue-600 hover:text-blue-700 font-medium underline decoration-2 underline-offset-2">
                 Vorbește cu noi →
@@ -436,14 +436,14 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
       </section>
 
       {/* Social Proof — Iterația 4.1 */}
-      <section className="py-20 bg-white px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+      <section className="py-20 bg-white dark:bg-slate-900 px-4 sm:px-6 lg:px-8 border-t border-gray-100 dark:border-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200/50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <span>Dovezi</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Rezultate reale din operațiuni</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Nu promitem în gol — arătăm impact concret în timp și predictibilitate.</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">Rezultate reale din operațiuni</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Nu promitem în gol — arătăm impact concret în timp și predictibilitate.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -467,10 +467,10 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
                 metric: 'de la 2 zile la <10 minute',
               },
             ].map((t) => (
-              <div key={t.name} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-depth-md">
-                <p className="text-sm text-gray-700 leading-relaxed mb-4">“{t.quote}”</p>
-                <p className="text-sm font-semibold text-gray-900">{t.name}</p>
-                <p className="text-xs text-gray-500 mb-3">{t.role}</p>
+              <div key={t.name} className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-2xl p-6 shadow-depth-md">
+                <p className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed mb-4">“{t.quote}”</p>
+                <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{t.name}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">{t.role}</p>
                 <p className="text-sm font-bold text-blue-700">{t.metric}</p>
               </div>
             ))}
@@ -479,16 +479,16 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
       </section>
 
       {/* NEW: FAQ Section (Gavriil) */}
-      <section id="faq" className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6 lg:px-8">
+      <section id="faq" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-slate-950 dark:to-slate-900 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200/50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <span>FAQ</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Întrebări frecvente
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 dark:text-gray-300">
               Ai o întrebare? Probabil nu ești primul.
             </p>
           </div>
@@ -520,9 +520,9 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
                 a: 'AI-ul nu ia decizii finale de business. Îți arătăm datele sursă și propunerea înainte de aprobare. Pentru acțiuni critice, controlul final rămâne uman.'
               },
             ].map(({ q, a }) => (
-              <div key={q} className="card-subtle glass border-gray-200 rounded-2xl p-6 shadow-depth-md">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{q}</h3>
-                <p className="text-gray-600 leading-relaxed">{a}</p>
+              <div key={q} className="card-subtle glass border-gray-200 dark:border-slate-700 rounded-2xl p-6 shadow-depth-md">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">{q}</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{a}</p>
               </div>
             ))}
           </div>
@@ -544,7 +544,7 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
             <p className="mb-4">Înscrie-te pentru acces anticipat. <strong className="text-white">Lansare martie 2026.</strong></p>
             <p className="mb-6">Fii printre primii 100 care testează viitorul automatizării inteligente.</p>
             
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-left max-w-2xl mx-auto mb-8">
+            <div className="bg-white dark:bg-slate-900/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-left max-w-2xl mx-auto mb-8">
               <p className="font-semibold text-white mb-3">Ce primești cu early access:</p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start space-x-2">
@@ -582,9 +582,9 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
               name="email"
               required
               placeholder="Email-ul tău" 
-              className="flex-1 px-6 py-4 rounded-xl text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 font-medium glass shadow-depth-md transition-smooth"
+              className="flex-1 px-6 py-4 rounded-xl text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 font-medium glass shadow-depth-md transition-smooth"
             />
-            <button type="submit" className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all min-h-[48px]">
+            <button type="submit" className="bg-white dark:bg-slate-900 text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all min-h-[48px]">
               Înscrie-mă →
             </button>
           </form>
