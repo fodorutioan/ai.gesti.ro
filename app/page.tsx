@@ -1,4 +1,11 @@
-export default function HomePage() {
+export default function HomePage({
+  searchParams,
+}: {
+  searchParams?: { lead?: string | string[] }
+}) {
+  const leadParam = searchParams?.lead
+  const leadStatus = Array.isArray(leadParam) ? leadParam[0] : leadParam
+
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
@@ -575,6 +582,22 @@ export default function HomePage() {
           <p className="text-sm text-blue-100">
             Formular activ: trimite lead-ul în backend (și webhook dacă e configurat). Fără spam.
           </p>
+
+          {leadStatus === 'ok' && (
+            <p className="mt-4 inline-flex items-center gap-2 rounded-lg border border-emerald-300/60 bg-emerald-50/90 px-4 py-2 text-sm font-medium text-emerald-900">
+              ✅ Mulțumim! Te-am înscris pentru early access.
+            </p>
+          )}
+          {leadStatus === 'invalid' && (
+            <p className="mt-4 inline-flex items-center gap-2 rounded-lg border border-amber-300/60 bg-amber-50/95 px-4 py-2 text-sm font-medium text-amber-900">
+              ⚠️ Email invalid. Te rugăm să verifici adresa și să încerci din nou.
+            </p>
+          )}
+          {leadStatus === 'error' && (
+            <p className="mt-4 inline-flex items-center gap-2 rounded-lg border border-red-300/60 bg-red-50/95 px-4 py-2 text-sm font-medium text-red-900">
+              ❌ A apărut o eroare la trimitere. Scrie-ne la contact@ai.gesti.ro.
+            </p>
+          )}
           
           <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-sm text-blue-100">
             <div className="flex items-center space-x-2">
