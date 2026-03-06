@@ -65,20 +65,54 @@ export default function HomePage() {
             </div>
 
             <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-xl" id="demo-live">
-              <p className="text-sm font-semibold text-blue-700 mb-4">Flux demo</p>
-              <div className="space-y-3 text-sm">
-                <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
-                  <p className="font-semibold text-gray-900">1) Input WhatsApp</p>
-                  <p className="text-gray-600">Factura primită și citită automat.</p>
-                </div>
-                <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
-                  <p className="font-semibold text-gray-900">2) Validare</p>
-                  <p className="text-gray-600">Suma, scadența și furnizorul sunt verificate.</p>
-                </div>
-                <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
-                  <p className="font-semibold text-gray-900">3) Aprobare finală</p>
-                  <p className="text-gray-600">Primești rezumatul, aprobi cu un click.</p>
-                </div>
+              <div className="flex items-center justify-between mb-5">
+                <p className="text-sm font-semibold text-blue-700">Flux demo</p>
+                <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-100">
+                  5 pași • sub 10 minute
+                </span>
+              </div>
+
+              <div className="space-y-3">
+                {[
+                  {
+                    icon: '💬',
+                    title: 'Primești documentul pe WhatsApp',
+                    desc: 'Poză, PDF sau factură trimisă în conversație.',
+                  },
+                  {
+                    icon: '🔎',
+                    title: 'AI extrage și validează datele',
+                    desc: 'Furnizor, sumă, scadență și TVA sunt verificate automat.',
+                  },
+                  {
+                    icon: '🧾',
+                    title: 'Se propune înregistrarea în gesti.ro',
+                    desc: 'Câmpurile sunt completate și clasificate pentru tine.',
+                  },
+                  {
+                    icon: '✅',
+                    title: 'Tu aprobi sau corectezi',
+                    desc: 'Confirmi final cu un click, cu audit trail clar.',
+                  },
+                  {
+                    icon: '🔔',
+                    title: 'Se salvează și primești confirmare',
+                    desc: 'Document arhivat, status actualizat, notificare finală.',
+                  },
+                ].map((step, idx) => (
+                  <div key={step.title} className="relative rounded-xl border border-gray-200 bg-gray-50/70 p-3.5">
+                    {idx < 4 && <div className="absolute left-7 top-[calc(100%+2px)] h-3 w-px bg-gray-300" />}
+                    <div className="flex gap-3 items-start">
+                      <div className="h-8 w-8 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-sm shadow-sm flex-shrink-0">
+                        {step.icon}
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-gray-900">{idx + 1}. {step.title}</p>
+                        <p className="text-xs text-gray-600 mt-0.5">{step.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
