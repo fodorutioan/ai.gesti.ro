@@ -89,26 +89,26 @@ export default function HeroCtas() {
         <a
           href={ctas.secondary.href}
           onClick={() => onClick(ctas.secondary.id)}
-          className="border-2 border-gray-200 bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg inline-block shadow-md hover:border-gray-300 hover:bg-gray-50 transition-all text-center"
+          className="border-2 border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-700 dark:text-gray-100 px-8 py-4 rounded-xl font-semibold text-lg inline-block shadow-md hover:border-gray-300 dark:hover:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all text-center"
         >
           {ctas.secondary.label}
         </a>
       </div>
 
-      <p className="text-sm text-gray-600 mb-3" data-exp-active={variant}>
+      <p className="text-sm text-gray-600 dark:text-gray-300 mb-3" data-exp-active={variant}>
         Varianta activă CTA: <strong>{variant}</strong> (A/B test în rulare)
       </p>
 
-      <div className="mb-8 rounded-xl border border-blue-100 bg-blue-50/60 px-4 py-3">
-        <p className="text-xs font-semibold text-blue-700 mb-2 uppercase tracking-wide">Ce vezi în demo live</p>
-        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-700">
+      <div className="mb-8 rounded-xl border border-blue-100 dark:border-slate-700 bg-blue-50/60 dark:bg-slate-900/80 px-4 py-3">
+        <p className="text-xs font-semibold text-blue-700 dark:text-blue-300 mb-2 uppercase tracking-wide">Ce vezi în demo live</p>
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-700 dark:text-gray-200">
           <span>• Flux complet WhatsApp/Telegram → gesti.ro</span>
           <span>• Validare + aprobare în timp real</span>
           <span>• Setup recomandat pentru firma ta</span>
         </div>
         <div className="mt-3 flex flex-wrap gap-2 text-xs">
-          <span className="px-2 py-1 rounded-full border border-green-200 bg-green-50 text-green-700">🟢 WhatsApp</span>
-          <span className="px-2 py-1 rounded-full border border-sky-200 bg-sky-50 text-sky-700">🔵 Telegram</span>
+          <span className="px-2 py-1 rounded-full border border-green-200 dark:border-green-700/60 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-200">🟢 WhatsApp</span>
+          <span className="px-2 py-1 rounded-full border border-sky-200 dark:border-sky-700/60 bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-200">🔵 Telegram</span>
         </div>
       </div>
     </>
