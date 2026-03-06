@@ -1,3 +1,5 @@
+import FloatingControls from './components/FloatingControls'
+
 export default function HomePage({
   searchParams,
 }: {
@@ -643,51 +645,53 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8">
+      <footer id="contact" className="bg-gray-900 text-gray-200 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2">
               <div className="text-2xl font-bold mb-4">
                 <span className="text-white">ai.</span>
-                <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">gesti</span>
-                <span className="text-gray-600">.ro</span>
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">gesti</span>
+                <span className="text-gray-300">.ro</span>
               </div>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-gray-200 leading-relaxed mb-6">
                 Automatizare inteligentă pentru ERP-urile moderne. Dezvoltat de{' '}
-                <a href="https://astralitech.com" className="text-blue-400 hover:underline">Astrali</a>, 
-                compania din spatele <a href="https://gesti.ro" className="text-blue-400 hover:underline">gesti.ro</a>.
+                <a href="https://astralitech.com" className="text-blue-300 hover:text-blue-200 hover:underline">Astrali</a>, 
+                compania din spatele <a href="https://gesti.ro" className="text-blue-300 hover:text-blue-200 hover:underline">gesti.ro</a>.
               </p>
               <div className="flex items-center space-x-2 text-sm">
                 <span>🇷🇴</span>
-                <span className="text-gray-400">Produs în România • ERP cloud România</span>
+                <span className="text-gray-300">Produs în România • ERP cloud România</span>
               </div>
             </div>
 
             <div>
               <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Produse</h3>
               <ul className="space-y-3">
-                <li><a href="https://gesti.ro" className="text-gray-600 hover:text-blue-500 text-sm">gesti.ro — ERP Cloud</a></li>
-                <li><a href="https://ai.gesti.ro" className="text-gray-600 hover:text-blue-500 text-sm">ai.gesti.ro — Agenți AI</a></li>
-                <li><a href="https://astralitech.com" className="text-gray-600 hover:text-blue-500 text-sm">Astrali — Compania mamă</a></li>
+                <li><a href="https://gesti.ro" className="text-gray-200 hover:text-blue-300 text-sm">gesti.ro — ERP Cloud</a></li>
+                <li><a href="https://ai.gesti.ro" className="text-gray-200 hover:text-blue-300 text-sm">ai.gesti.ro — Agenți AI</a></li>
+                <li><a href="https://astralitech.com" className="text-gray-200 hover:text-blue-300 text-sm">Astrali — Compania mamă</a></li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Contact & Legal</h3>
               <ul className="space-y-3">
-                <li><a href="mailto:contact@ai.gesti.ro" className="text-gray-600 hover:text-blue-500 text-sm">📧 Email</a></li>
-                <li><a href="/legal/privacy" className="text-gray-600 hover:text-blue-500 text-sm">Politica de confidențialitate</a></li>
-                <li><a href="/legal/terms" className="text-gray-600 hover:text-blue-500 text-sm">Termeni și condiții</a></li>
+                <li><a href="mailto:contact@ai.gesti.ro" className="text-gray-200 hover:text-blue-300 text-sm">📧 Email</a></li>
+                <li><a href="/legal/privacy" className="text-gray-200 hover:text-blue-300 text-sm">Politica de confidențialitate</a></li>
+                <li><a href="/legal/terms" className="text-gray-200 hover:text-blue-300 text-sm">Termeni și condiții</a></li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+          <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-300">
             <p>© 2026 Astrali. Toate drepturile rezervate.</p>
             <p className="mt-2">Built with ❤️ and AI by the Heavenly Host team.</p>
           </div>
         </div>
       </footer>
+
+      <FloatingControls />
     </main>
   )
 }

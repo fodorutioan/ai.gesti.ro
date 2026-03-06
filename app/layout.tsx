@@ -51,6 +51,7 @@ export default function RootLayout({
         <script src="https://cdn.tailwindcss.com"></script>
         <script dangerouslySetInnerHTML={{__html: `
           tailwind.config = {
+            darkMode: 'class',
             theme: {
               extend: {
                 colors: {
@@ -64,6 +65,16 @@ export default function RootLayout({
             }
           }
         `}} />
+        <script dangerouslySetInnerHTML={{__html: `
+          (function() {
+            try {
+              const saved = localStorage.getItem('theme')
+              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+              const isDark = saved ? saved === 'dark' : prefersDark
+              if (isDark) document.documentElement.classList.add('dark')
+            } catch (e) {}
+          })();
+        `}} />
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes gradient-shift {
             0%, 100% { background-position: 0% 50%; }
@@ -73,6 +84,23 @@ export default function RootLayout({
             background-size: 200% auto;
             animation: gradient-shift 3s ease infinite;
           }
+
+          html.dark body { background: #0b1220; color: #e5e7eb; }
+          html.dark .bg-white { background-color: #0f172a !important; }
+          html.dark .bg-gray-50 { background-color: #111827 !important; }
+          html.dark .bg-gray-50\/70 { background-color: rgba(17,24,39,.8) !important; }
+          html.dark .from-gray-50 { --tw-gradient-from: #111827 var(--tw-gradient-from-position) !important; }
+          html.dark .to-white { --tw-gradient-to: #0f172a var(--tw-gradient-to-position) !important; }
+          html.dark .text-gray-900 { color: #f8fafc !important; }
+          html.dark .text-gray-700 { color: #e2e8f0 !important; }
+          html.dark .text-gray-600 { color: #cbd5e1 !important; }
+          html.dark .text-gray-500 { color: #94a3b8 !important; }
+          html.dark .border-gray-200 { border-color: #334155 !important; }
+          html.dark .border-gray-100 { border-color: #1e293b !important; }
+          html.dark .shadow-depth-md,
+          html.dark .shadow-xl,
+          html.dark .shadow-2xl,
+          html.dark .shadow-lg { box-shadow: 0 10px 30px rgba(0,0,0,.35) !important; }
         `}} />
       </head>
       <body className="antialiased">{children}</body>
