@@ -85,6 +85,19 @@ ai.gesti.ro este dezvoltat de [Astrali](https://astralitech.com) — companie fo
 - [Contributing](#) — Coming soon
 - [API Docs](#) — Coming soon
 
+## ⚙️ Lead Capture Setup
+
+Homepage signup trimite în `POST /api/lead`.
+
+1. Copiază variabilele:
+   ```bash
+   cp .env.example .env.local
+   ```
+2. Configurează `LEAD_WEBHOOK_URL` cu destinația ta (CRM/Slack/Make/Zapier).
+3. Deploy.
+
+Fallback: dacă `LEAD_WEBHOOK_URL` lipsește, lead-ul este logat server-side.
+
 ---
 
 ## 🔗 Links
