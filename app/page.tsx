@@ -363,7 +363,7 @@ Automatizare operațională direct din WhatsApp și Telegram, integrată cu gest
               <span>Filozofia noastră</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Tehnologie cu conștiință
+              Tehnologie în slujba omului
             </h2>
             {/* IMPROVED INTRO (Gavriil) */}
             <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">

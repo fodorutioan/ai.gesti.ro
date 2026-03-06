@@ -57,7 +57,7 @@ Ai volume mari de facturi și puțin timp pentru administrație.
 - ✅ **Human-in-the-loop:** Deciziile importante rămân ale tale
 - ✅ **Educație:** Pregătim utilizatorii pentru viitorul muncii
 
-**Nu vindem utopii. Vindem soluții reale, cu conștiință.**
+**Nu vindem utopii. Vindem soluții reale, cu responsabilitate.**
 
 ---
 
