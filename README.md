@@ -12,7 +12,7 @@ Aducem puterea gesti.ro (ERP) la nivelul conversației tale zilnice. Primești o
 
 ---
 
-## 🧠 What is ai.gesti.ro?
+## 🧠 What is ai.gesti.ro? 
 
 ai.gesti.ro este un sistem multi-agentic inteligent care:
 
